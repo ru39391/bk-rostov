@@ -1,5 +1,73 @@
 extends base
 
 block meta
-  - var pageClass = 'main-page';
+  - var pageClass = '';
   - var title = 'Главная';
+
+block wrapper
+  .promo.swiper-container
+    .swiper-wrapper
+      .swiper-slide
+        .promo__picture
+          +img('content/promo.jpg','img-cover')
+        .container
+          .promo__title Модульные двухэтажные АБК жилые, офисные, штабы строительства
+          .promo__price Цена
+            .promo__price-value от 9 500 руб/м
+          ul.promo__list
+            li.promo__list-item изготовление, монтаж и сборка кровли от 10 рабочих дней
+            li.promo__list-item выполнение под ключ или "шеф монтаж"
+          a.btn.btn-danger(href="#") Подробнее
+    .swiper-nav
+      button.swiper-button.swiper-button-prev(type="button")
+        +icon('arrow-prev')
+      button.swiper-button.swiper-button-next(type="button")
+        +icon('arrow-next')
+    .swiper-pagination
+      .swiper-pagination-bullet
+      .swiper-pagination-bullet.swiper-pagination-bullet-active
+      .swiper-pagination-bullet
+      .swiper-pagination-bullet
+      .swiper-pagination-bullet
+
+  .section
+    .container
+      .section__title.section__title_border_bottom.color-danger Услуги компании
+      .section__title.text-uppercase изготовление и монтаж под ключ
+      ul.section__list.row
+        li.section__list-item.col-md-6
+          span.section__list-icon
+            +icon('checked')
+          span.font-weight-bold Модульные здания
+        li.section__list-item.col-md-6
+          span.section__list-icon
+            +icon('checked')
+          span.font-weight-bold Блок-контейнеры
+        li.section__list-item.col-md-6
+          span.section__list-icon
+            +icon('checked')
+          span.font-weight-bold Проекты из сендвич-панелей
+        li.section__list-item.col-md-6
+          span.section__list-icon
+            +icon('checked')
+          span.font-weight-bold Контрольно-пропускные пункты
+      .row
+        .col-md-6.mb-3
+          a(href="#")
+            +img('content/bk.jpg')
+        .col-md-6.mb-3
+          a(href="#")
+            +img('content/bk.jpg')
+        .col-md-6.mb-3
+          a(href="#")
+            +img('content/bk.jpg')
+        .col-md-6.mb-3
+          a(href="#")
+            +img('content/bk.jpg')
+
+  .divider
+    .container
+      .divider__title Получить стоимость услуг
+
+  .section.container
+    

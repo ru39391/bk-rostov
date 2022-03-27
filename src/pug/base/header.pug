@@ -1,1 +1,48 @@
 header.header
+  .container.d-flex.flex-wrap.align-items-center.px-0
+    .col-md-5
+      a.logo(href="/")
+        span.logo__icon
+          +icon('logo')
+        span.d-flex.flex-column
+          span.logo__title.logo__title_font_large Блок-контейнеры
+          span.logo__title от производителя
+    .contacts.col-md-7.d-flex.flex-wrap.align-items-center.justify-content-end
+      a.contacts__item(href="#")
+        span.contacts__icon
+          +icon('wapp')
+        span.contacts__title Связаться с нами в WhatsApp
+      .d-flex.flex-wrap.align-items-center
+        .contacts__icon
+          +icon('phone-colored')
+        .contacts__item
+          a.contacts__title.contacts__title_font_large(href="#") +7 (863) 226-01-77
+          a.contacts__title(href="#") Ростов-на-Дону, ул. Красноармейская, 72
+nav.nav
+  .container
+    button.nav__toggler(type="button")
+      span.nav__toggler-icon
+        +icon('menu')
+      span.nav__title
+        span.nav__toggler-show Показать
+        span.nav__toggler-hide Скрыть
+        | меню
+    ul.nav__menu
+      li.nav__item
+        a.nav__link(href="#") Главная
+      li.nav__item
+        a.nav__link.nav__link_type_plain(href="#") Продукция
+        a.nav__link.nav__link_type_btn(href="#") Продукция
+        .nav__dropdown
+          a.nav__link(href="#") Модульные здания
+          a.nav__link(href="#") Проекты из сендвич-панелей
+          a.nav__link(href="#") Блок-контейнеры
+          a.nav__link(href="#") Контрольно-пропускные пункты
+      li.nav__item
+        a.nav__link(href="#") Цены
+      li.nav__item
+        a.nav__link(href="#") Аренда
+      li.nav__item
+        a.nav__link(href="#") Бытовки б/у
+      li.nav__item
+        a.nav__link(href="#") Контакты

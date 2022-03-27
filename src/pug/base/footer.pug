@@ -1,1 +1,24 @@
 footer.footer
+  .col-md-6
+  .container.d-flex.flex-wrap.px-0
+    .col-md-6
+      .footer__title Наши контакты
+      .contacts.contacts_border_bottom
+        a.contacts__item(href="#")
+          span.contacts__icon
+            +icon('placemark')
+          span.contacts__title Ростов-на-Дону, ул. Красноармейская, 72
+        a.contacts__item(href="#")
+          span.contacts__icon
+            +icon('phone')
+          span.contacts__title +7 (863) 226-01-77
+        a.contacts__item(href="#")
+          span.contacts__icon
+            +icon('email')
+          span.contacts__title rostov-blok@yandex.ru
+      .footer__subtitle Остались вопросы?
+      button.btn(type="button") Заказать звонок
+      .footer__text
+        p &copy; Блок-контейнеры от производителя Ростов-на-Дону, 2020 - 2021.
+          br
+          a.text-underline(href="#") Политика обработки персональных данных
