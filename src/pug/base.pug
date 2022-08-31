@@ -16,11 +16,12 @@ html(lang="ru")
 
     //- link(href="../img/favicon.ico" rel="shortcut icon")
 
-  body(class=pageClass)
-    //- block header
+  body.page
+    block header
       include base/header
 
-    block wrapper
+    .flex-grow-1
+      block wrapper
 
     block footer
       include base/footer

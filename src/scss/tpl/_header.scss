@@ -1,0 +1,4 @@
+.header {
+  @include py(12px);
+  @include border(0 0 1px,#eaeaea);
+}

@@ -1,24 +1,26 @@
 header.header
-  .wrapper.d-flex.flex-wrap.align-items-center.px-0
-    .col-md-5
-      a.logo(href="/")
-        span.logo__icon
-          +icon('logo')
+  .wrapper.d-flex.flex-column.flex-md-row.flex-md-wrap.align-items-center.justify-content-center
+    .logo.flex-grow-1.mb-3.mb-md-0
+      a.logo__icon.mr-2.mr-md-4(href="/")
+        +img('logo.png')
+      a.d-flex.flex-column(href="/")
+        span.logo__title.logo__title_fs_lg.font-weight-bold.text-nowrap.color-brand Блок-контейнеры
+        span.logo__title от производителя
+    .contacts.col-xl-6.col-lg-7.col.d-flex.flex-wrap.align-items-center.justify-content-sm-between.px-0
+      a.contacts__item.mb-2.mb-lg-0.mr-3.mr-sm-0(href="#")
+        span.contacts__icon.mr-2
+          +icon('whatsapp')
+        span.contacts__subtitle.d-none.d-sm-block Связаться с нами
+          span.d-lg-block &nbsp;в WhatsApp
+      a.contacts__item.mb-2.mb-lg-0(href="#")
+        span.contacts__icon.color-brand.mr-2
+          +icon('phone-filled')
         span.d-flex.flex-column
-          span.logo__title.logo__title_font_large Блок-контейнеры
-          span.logo__title от производителя
-    .contacts.col-md-7.d-flex.flex-wrap.align-items-center.justify-content-end
-      a.contacts__item(href="#")
-        span.contacts__icon
-          +icon('wapp')
-        span.contacts__title Связаться с нами в WhatsApp
-      .d-flex.flex-wrap.align-items-center
-        .contacts__icon
-          +icon('phone-colored')
-        .contacts__item
-          a.contacts__title.contacts__title_font_large(href="#") +7 (863) 226-01-77
-          a.contacts__title(href="#") Ростов-на-Дону, ул. Красноармейская, 72
-nav.nav
+          span.contacts__title.contacts__title_fs_sm.font-weight-bold.text-nowrap.mb-1 +7 (863) 226-01-77
+          span.contacts__subtitle.d-flex.flex-column.d-sm-block
+            span.text-nowrap Ростов-на-Дону,
+            span.text-nowrap ул. Красноармейская, 72
+nav.nav.d-none
   .wrapper
     button.nav__toggler(type="button")
       span.nav__toggler-icon
