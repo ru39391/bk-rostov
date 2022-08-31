@@ -1,0 +1,17 @@
+.tdec-none {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+      text-decoration: none;
+  }
+}
+
+.tdec-underline {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+      text-decoration: underline;
+  }
+}

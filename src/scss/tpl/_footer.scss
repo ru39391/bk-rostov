@@ -1,0 +1,66 @@
+.footer {
+  @include py(32px);
+  overflow: hidden;
+  position: relative;
+  font-weight: 600;
+  color: #fff;
+  background-color: $color__brand;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 0;
+  }
+}
+
+.footer__map {
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 360px;
+    padding-left: 0;
+    margin-bottom: 32px;
+  }
+}
+
+.footer__section {
+  margin: 0 0 32px;
+}
+
+.footer__title {
+  @include before;
+  color: #fff;
+
+  @include media-breakpoint-up(md) {
+    @include font(36px,700);
+    @include offset(0 0 24px,0 0 30px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include font(32px,700);
+    @include offset(0 0 20px,0 0 24px);
+  }
+
+  &:before {
+    @include wh(120px,4px);
+    bottom: 0;
+    left: -80px;
+    background-color: #131313;
+  }
+}
+
+.footer__subtitle {
+
+  @include media-breakpoint-up(md) {
+    font-size: 30px;
+    margin: 0 0 32px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 26px;
+    margin: 0 0 26px;
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "myBaseTpl",
+  "name": "bk-rostov",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ru39391/myBaseTpl.git"
+    "url": "https://github.com/ru39391/bk-rostov.git"
   },
   "keywords": [],
-  "author": "tg:vladimir_wd <my.freelance.mailbox@gmail.com> (https://freelance.ru/nutheadbeast)",
+  "author": "tg:vladimir_wd <my.freelance.mailbox@gmail.com> (https://github.com/ru39391)",
   "license": "ISC",
   "homepage": "",
   "devDependencies": {
