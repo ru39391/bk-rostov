@@ -20,26 +20,29 @@ header.header
           span.contacts__subtitle.d-flex.flex-column.d-sm-block
             span.text-nowrap Ростов-на-Дону,
             span.text-nowrap ул. Красноармейская, 72
-nav.nav.d-none
-  .wrapper
-    button.nav__toggler(type="button")
-      span.nav__toggler-icon
-        +icon('menu')
-      span.nav__title
-        span.nav__toggler-show Показать
-        span.nav__toggler-hide Скрыть
-        | меню
+nav.nav
+  button.nav__toggler(type="button")
+    span.nav__toggler-icon.nav__toggler-icon_type_show.mr-3
+      +icon('menu')
+    span.nav__toggler-icon.nav__toggler-icon_type_hide.mr-3
+      +icon('close')
+    span.nav__toggler-title
+      span.nav__toggler-show Показать
+      span.nav__toggler-hide Скрыть
+      | &nbsp;меню
+  .wrapper.pos-rel
     ul.nav__menu
       li.nav__item
-        a.nav__link(href="#") Главная
+        a.nav__link.nav__link_current(href="#") Главная
       li.nav__item
-        a.nav__link.nav__link_type_plain(href="#") Продукция
-        a.nav__link.nav__link_type_btn(href="#") Продукция
+        a.nav__link(href="#") Продукция
+        button.nav__dropdown-toggler.ml-2(type="button")
+          +icon('arrow-down')
         .nav__dropdown
-          a.nav__link(href="#") Модульные здания
-          a.nav__link(href="#") Проекты из сендвич-панелей
-          a.nav__link(href="#") Блок-контейнеры
-          a.nav__link(href="#") Контрольно-пропускные пункты
+          a.nav__link.nav__link_type_children(href="#") Модульные здания
+          a.nav__link.nav__link_type_children(href="#") Проекты из сендвич-панелей
+          a.nav__link.nav__link_type_children(href="#") Блок-контейнеры
+          a.nav__link.nav__link_type_children(href="#") Контрольно-пропускные пункты
       li.nav__item
         a.nav__link(href="#") Цены
       li.nav__item
