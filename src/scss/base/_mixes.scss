@@ -1,0 +1,19 @@
+.zi-1 {
+  @extend %zi-1;
+}
+
+.zi-2 {
+  @extend %zi-2;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}

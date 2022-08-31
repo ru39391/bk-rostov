@@ -1,0 +1,9 @@
+.icon-fluid {
+  @include wh(100%);
+  pointer-events: none;
+}
+
+.img-cover {
+  @include wh(100%);
+  object-fit: cover;
+}

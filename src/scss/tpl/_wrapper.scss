@@ -1,0 +1,5 @@
+.wrapper {
+  @include mw(1600px);
+  @include mx(auto);
+  @include px($grid-gutter-width/2);
+}

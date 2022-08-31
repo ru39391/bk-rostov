@@ -1,24 +1,27 @@
 footer.footer
-  .col-md-6
-  .container.d-flex.flex-wrap.px-0
-    .col-md-6
-      .footer__title Наши контакты
-      .contacts.contacts_border_bottom
-        a.contacts__item(href="#")
-          span.contacts__icon
-            +icon('placemark')
-          span.contacts__title Ростов-на-Дону, ул. Красноармейская, 72
-        a.contacts__item(href="#")
-          span.contacts__icon
-            +icon('phone')
-          span.contacts__title +7 (863) 226-01-77
-        a.contacts__item(href="#")
-          span.contacts__icon
-            +icon('email')
-          span.contacts__title rostov-blok@yandex.ru
-      .footer__subtitle Остались вопросы?
-      button.btn(type="button") Заказать звонок
-      .footer__text
-        p &copy; Блок-контейнеры от производителя Ростов-на-Дону, 2020 - 2021.
+  .footer__map.col-xl-5.offset-xl-1.col-lg-6.pr-0.pl-xl-0
+    script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74758b5ee4465194e02a444d5c93601d3a5240432e973a93791a8e41dc5c7c95&width=100%25&height=100%&lang=ru_RU&scroll=false")
+  .wrapper.d-lg-flex.flex-wrap.px-0
+    .col-lg-6
+      .footer__section
+        .footer__title Наши контакты
+        .contacts.contacts_border_bottom
+          .contacts__item.color-white
+            span.contacts__icon
+              +icon('location')
+            span.contacts__title Ростов-на-Дону, ул. Красноармейская, 72
+          a.contacts__item.color-white(href="#")
+            span.contacts__icon
+              +icon('phone')
+            span.contacts__title +7 (863) 226-01-77
+          a.contacts__item.color-white(href="#")
+            span.contacts__icon
+              +icon('email')
+            span.contacts__title rostov-blok@yandex.ru
+      .footer__section
+        .footer__subtitle Остались вопросы?
+        button.btn(type="button") Заказать звонок
+      .footer__text.font-weight-normal
+        p.mb-0 &copy; Блок-контейнеры от производителя Ростов-на-Дону, 2020 - 2021.
           br
-          a.text-underline(href="#") Политика обработки персональных данных
+          a.tdec-underline.color-white(href="#") Политика обработки персональных данных

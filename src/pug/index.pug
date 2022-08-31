@@ -4,13 +4,13 @@ block meta
   - var pageClass = '';
   - var title = 'Главная';
 
-block wrapper
+//- block wrapper
   .promo.swiper-container
     .swiper-wrapper
       .swiper-slide
         .promo__picture
           +img('content/promo.jpg','img-cover')
-        .container
+        .wrapper
           .promo__title Модульные двухэтажные АБК жилые, офисные, штабы строительства
           .promo__price Цена
             .promo__price-value от 9 500 руб/м
@@ -31,7 +31,7 @@ block wrapper
       .swiper-pagination-bullet
 
   .section
-    .container
+    .wrapper
       .section__title.section__title_border_bottom.color-danger Услуги компании
       .section__title.text-uppercase изготовление и монтаж под ключ
       ul.section__list.row
@@ -66,8 +66,7 @@ block wrapper
             +img('content/bk.jpg')
 
   .divider
-    .container
+    .wrapper
       .divider__title Получить стоимость услуг
 
-  .section.container
-    
+  .section.wrapper

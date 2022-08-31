@@ -13,10 +13,21 @@
 @import 'base/extends';
 @import 'base/common';
 
+/* mixes */
+@import 'base/bg';
+@import 'base/img';
+@import 'base/text';
+@import 'base/color';
+@import 'base/width';
+@import 'base/height';
+@import 'base/mixes';
+
 /* tpl */
 @import 'tpl/btn';
 @import 'tpl/form';
 @import 'tpl/header';
 @import 'tpl/footer';
+@import 'tpl/wrapper';
 @import 'tpl/pathway';
 @import 'tpl/content';
+@import 'tpl/contacts';

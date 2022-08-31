@@ -1,0 +1,14 @@
+.btn {
+  @extend %btn-default;
+  @extend %d-flex-column;
+  @extend %d-flex-centered;
+  @include color(#fff);
+  height: 56px;
+  width: 100%;
+  max-width: 240px;
+  padding: 8px 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color: $color__info
+}
