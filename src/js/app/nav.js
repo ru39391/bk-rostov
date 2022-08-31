@@ -4,12 +4,10 @@ const navDropdownTogglersArr = Array.from(document.querySelectorAll('.nav__dropd
 navDropdownTogglersArr.forEach(navDropdownTogglersArrEl => {
   navDropdownTogglersArrEl.addEventListener('click', e => {
     e.preventDefault();
-    const navDropdownToggler = e.target;
-    const navItemParams = {
-      target: navDropdownToggler.closest('.nav__item'),
-      className: 'nav__item_active'
-    };
-    toggleClassName(navItemParams);
+    toggleClassName(e.target, {
+      targetSel: '.nav__item',
+      classNameActive: 'nav__item_active'
+    });
   });
 });
 
@@ -17,12 +15,10 @@ const navTogglerBtn = document.querySelector('.nav__toggler');
 if(navTogglerBtn) {
   navTogglerBtn.addEventListener('click', e => {
     e.preventDefault();
-    const navTogglerBtn = e.target;
-    const navParams = {
-      target: navTogglerBtn.closest('.nav'),
-      className: 'nav_active'
-    };
-    toggleClassName(navParams);
+    toggleClassName(e.target, {
+      targetSel: '.nav',
+      classNameActive: 'nav_active'
+    });
   });
 }
 

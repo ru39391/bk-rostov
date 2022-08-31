@@ -4,8 +4,8 @@ block meta
   - var pageClass = '';
   - var title = 'Главная';
 
-//- block wrapper
-  .promo.swiper-container
+block wrapper
+  //- .promo.swiper-container
     .swiper-wrapper
       .swiper-slide
         .promo__picture
@@ -32,38 +32,39 @@ block meta
 
   .section
     .wrapper
-      .section__title.section__title_border_bottom.color-danger Услуги компании
-      .section__title.text-uppercase изготовление и монтаж под ключ
+      .section__heading
+        .section__title.section__title_border_bottom.color-brand Услуги компании
+        .section__title.text-uppercase изготовление и монтаж под ключ
       ul.section__list.row
-        li.section__list-item.col-md-6
-          span.section__list-icon
-            +icon('checked')
-          span.font-weight-bold Модульные здания
-        li.section__list-item.col-md-6
-          span.section__list-icon
-            +icon('checked')
-          span.font-weight-bold Блок-контейнеры
-        li.section__list-item.col-md-6
-          span.section__list-icon
-            +icon('checked')
-          span.font-weight-bold Проекты из сендвич-панелей
-        li.section__list-item.col-md-6
-          span.section__list-icon
-            +icon('checked')
-          span.font-weight-bold Контрольно-пропускные пункты
-      .row
-        .col-md-6.mb-3
-          a(href="#")
-            +img('content/bk.jpg')
-        .col-md-6.mb-3
-          a(href="#")
-            +img('content/bk.jpg')
-        .col-md-6.mb-3
-          a(href="#")
-            +img('content/bk.jpg')
-        .col-md-6.mb-3
-          a(href="#")
-            +img('content/bk.jpg')
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Модульные здания
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Блок-контейнеры
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Проекты из сендвич-панелей
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Контрольно-пропускные пункты
+      .gallery-grid.row
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
 
   .divider
     .wrapper

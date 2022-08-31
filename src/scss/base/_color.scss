@@ -9,3 +9,7 @@
 .color-brand {
   @include color($color__brand !important);
 }
+
+.color-success {
+  @include color($color__success !important);
+}
