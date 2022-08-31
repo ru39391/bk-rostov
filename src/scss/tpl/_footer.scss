@@ -48,12 +48,11 @@
     @include wh(120px,4px);
     bottom: 0;
     left: -80px;
-    background-color: #131313;
+    background-color: $color__default;
   }
 }
 
 .footer__subtitle {
-
   @include media-breakpoint-up(md) {
     font-size: 30px;
     margin: 0 0 32px;

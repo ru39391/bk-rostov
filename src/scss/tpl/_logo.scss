@@ -1,0 +1,12 @@
+.logo {
+  @extend %d-flex-ai-center;
+}
+
+.logo__title {
+  font-weight: 500;
+  line-height: 1.2;
+
+  &.logo__title_fs_lg {
+    font-size: 24px;
+  }
+}

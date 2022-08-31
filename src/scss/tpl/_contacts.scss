@@ -32,3 +32,8 @@
     @include fs-lh(18px,$line-height__content);
   }
 }
+
+.contacts__subtitle {
+  @include fs-lh(14px,1.3);
+  color: #666;
+}
