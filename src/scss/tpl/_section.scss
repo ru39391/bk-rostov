@@ -26,6 +26,10 @@
   @include media-breakpoint-down(sm) {
     margin-bottom: 36px;
   }
+
+  &.section__heading_mb_sm {
+    margin-bottom: 36px;
+  }
 }
 
 .section__title {

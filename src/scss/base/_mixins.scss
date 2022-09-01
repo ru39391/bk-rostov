@@ -131,6 +131,16 @@
   }
 }
 
+@mixin h4 {
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
+}
+
 @mixin inline-block($va: top) {
   display: inline-block;
   vertical-align: $va;
