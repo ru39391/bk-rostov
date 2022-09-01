@@ -230,7 +230,26 @@ block wrapper
         .mr-3.mr-md-5.mb-2
           +img('content/logo/11.png')
 
-  .section.section_bg_disk.bg-dark
+  .section.bg-brand
+    .wrapper
+      .section__heading.section__heading_mb_sm
+        .section__title.text-uppercase.text-center.color-white Отзывы
+      .reviews.swiper
+        .swiper-wrapper
+          .swiper-slide
+            .reviews__item
+              .reviews__title Офисный вагончик
+              .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
+              .reviews__date 16.09.2021 г.
+        .swiper-nav
+          button.swiper-nav__item.swiper-nav__item_dir_prev(type="button")
+            +icon('arrow-left')
+          button.swiper-nav__item.swiper-nav__item_dir_next(type="button")
+            +icon('arrow-right')
+        .swiper-pagination
+
+
+  //- .section.section_bg_disk.bg-dark
     .wrapper.zi-2
       .section__heading.section__heading_mb_sm.d-flex.flex-wrap.align-items-end.justify-content-between
         .mb-3.mb-lg-0
