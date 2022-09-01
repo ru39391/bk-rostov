@@ -66,7 +66,7 @@ block wrapper
           a.gallery-grid__item(href="#")
             +img('content/bk.jpg', 'img-cover')
 
-  .divider
+  //- .divider
     .wrapper
       .divider__title Получить стоимость услуг
 
@@ -110,3 +110,80 @@ block wrapper
               p Мы отказались от использования дверей из Китая, так как двери от наших поставщиков гораздо надежнее
       .d-flex.justify-content-center
         a.btn.bg-brand(href="#") Подробнее
+
+  .section.bg-light
+    .wrapper
+      .section__heading
+        .section__title.text-uppercase.text-center Цены на продукцию
+      .row
+        .col-lg-4.mb-4.mb-lg-0
+          .price
+            .price__title.price__title_color_info ЭКОНОМ
+            .flex-grow-1.zi-2.mb-4
+              .price__desc от
+                span.price__value &nbsp;65 000₽
+              .price__feature пол ДСП 16 мм
+              .price__feature стены - ДВП
+              .price__feature потолок - ДВП
+              .price__feature окно ПВХ 700х900 поворотное
+              .price__feature дверь металлическая
+              .price__feature производство КНР
+              .price__feature.price__feature_type_unavailable без электрики
+              .price__feature.price__feature_type_plain Опционально — усиленное утепление, замена дверей/окон, отделки
+            .price__footer
+              button.btn.btn_lg.bg-brand(href="#") Заказать
+        .col-lg-4.mb-4.mb-lg-0
+          .price
+            .price__title.price__title_color_warning СТАНДАРТ
+            .flex-grow-1.zi-2.mb-4
+              .price__desc от
+                span.price__value &nbsp;85 000₽
+              .price__feature пол ДСП 16 мм
+              .price__feature стены - ДВП
+              .price__feature производство КНР
+              .price__feature.price__feature_type_unavailable без электрики
+              .price__feature.price__feature_type_plain Опционально — усиленное утепление, замена дверей/окон, отделки
+            .price__footer
+              button.btn.btn_lg.bg-brand(href="#") Заказать
+        .col-lg-4
+          .price
+            .price__title.price__title_color_brand КОМФОРТ
+            .flex-grow-1.zi-2.mb-4
+              .price__desc от
+                span.price__value &nbsp;94 000₽
+              .price__feature пол ДСП 16 мм
+              .price__feature стены - ДВП
+              .price__feature потолок - ДВП
+              .price__feature окно ПВХ 700х900 поворотное
+              .price__feature дверь металлическая
+            .price__footer
+              button.btn.btn_lg.bg-brand(href="#") Заказать
+
+  .section
+    .wrapper
+      .section__heading
+        .section__title.section__title_border_bottom.color-brand Нам доверяют
+        .section__title.text-uppercase постоянные партнеры
+      .d-flex.flex-wrap
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/1.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/2.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/3.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/4.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/5.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/6.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/7.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/8.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/9.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/10.png')
+        .mr-3.mr-md-5.mb-2
+          +img('content/logo/11.png')

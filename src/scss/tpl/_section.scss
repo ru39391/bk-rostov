@@ -40,9 +40,9 @@
     @include offset(0 0 12px,0 0 12px);
 
     &:before {
-      @include wh(130px,4px);
-      left: -90px;
+      @include wh(120px,4px);
       bottom: 0;
+      left: -80px;
       background-color: $color__brand;
     }
   }
