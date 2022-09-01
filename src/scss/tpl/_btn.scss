@@ -10,5 +10,10 @@
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 4px;
-  background-color: $color__info
+  background-color: $color__info;
+
+  &.btn_lg {
+    height: 64px;
+    max-width: 288px;
+  }
 }

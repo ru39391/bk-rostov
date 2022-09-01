@@ -1,0 +1,128 @@
+.price {
+  @extend %d-flex-column;
+  @include before;
+  height: 100%;
+  padding: 36px 24px 24px;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 rgba(0,0,0,.2);
+
+  &:before {
+    @include wh(250px);
+    z-index: 1;
+    top: -80px;
+    right: -50px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+  }
+}
+
+.price__title {
+  @extend %zi-2;
+  @include h2;
+  @include before;
+  padding: 0 0 16px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 0 44px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 0 32px;
+  }
+
+  &:before {
+    @include wh(60px,4px);
+    left: 50%;
+    bottom: 0;
+    margin: 0 0 0 -30px;
+  }
+
+  &.price__title_color_info {
+    color: $color__info;
+
+    &:before {
+      background-color: $color__info;
+    }
+  }
+
+  &.price__title_color_warning {
+    color: $color__warning;
+
+    &:before {
+      background-color: $color__warning;
+    }
+  }
+
+  &.price__title_color_brand {
+    color: $color__brand;
+
+    &:before {
+      background-color: $color__brand;
+    }
+  }
+}
+
+.price__desc {
+  @include h2;
+  font-weight: 600;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 0 36px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 0 24px;
+  }
+}
+
+.price__value {
+  @include media-breakpoint-up(md) {
+    font-size: 48px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 32px;
+  }
+}
+
+.price__feature {
+  @include before;
+  @include offset(0 0 14px,0 0 0 30px);
+  color: #525252;
+  line-height: $line-height__content;
+
+  &:before {
+    @include h1;
+    @include pos(-25%,0);
+    content: '+';
+    line-height: 1;
+    font-weight: 400;
+    color: $color__success;
+  }
+
+  &.price__feature_type_plain {
+    &:before {
+      display: none;
+    }
+  }
+
+  &.price__feature_type_unavailable {
+    &:before {
+      content: '-';
+      top: -50%;
+      color: $color__brand;
+    }
+  }
+}
+
+.price__footer {
+  @extend %zi-2;
+  display: flex;
+  justify-content: center;
+}
