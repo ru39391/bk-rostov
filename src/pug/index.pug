@@ -4,8 +4,8 @@ block meta
   - var pageClass = '';
   - var title = 'Главная';
 
-//- block wrapper
-  .promo.swiper-container
+block wrapper
+  //- .promo.swiper-container
     .swiper-wrapper
       .swiper-slide
         .promo__picture
@@ -32,41 +32,81 @@ block meta
 
   .section
     .wrapper
-      .section__title.section__title_border_bottom.color-danger Услуги компании
-      .section__title.text-uppercase изготовление и монтаж под ключ
+      .section__heading
+        .section__title.section__title_border_bottom.color-brand Услуги компании
+        .section__title.text-uppercase изготовление и монтаж под ключ
       ul.section__list.row
-        li.section__list-item.col-md-6
-          span.section__list-icon
-            +icon('checked')
-          span.font-weight-bold Модульные здания
-        li.section__list-item.col-md-6
-          span.section__list-icon
-            +icon('checked')
-          span.font-weight-bold Блок-контейнеры
-        li.section__list-item.col-md-6
-          span.section__list-icon
-            +icon('checked')
-          span.font-weight-bold Проекты из сендвич-панелей
-        li.section__list-item.col-md-6
-          span.section__list-icon
-            +icon('checked')
-          span.font-weight-bold Контрольно-пропускные пункты
-      .row
-        .col-md-6.mb-3
-          a(href="#")
-            +img('content/bk.jpg')
-        .col-md-6.mb-3
-          a(href="#")
-            +img('content/bk.jpg')
-        .col-md-6.mb-3
-          a(href="#")
-            +img('content/bk.jpg')
-        .col-md-6.mb-3
-          a(href="#")
-            +img('content/bk.jpg')
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Модульные здания
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Блок-контейнеры
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Проекты из сендвич-панелей
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Контрольно-пропускные пункты
+      .gallery-grid.row
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
 
   .divider
     .wrapper
       .divider__title Получить стоимость услуг
 
-  .section.wrapper
+  .section
+    .wrapper
+      h1.section__heading.section__heading_mb_sm.d-flex.flex-column
+        span.section__title.section__title_border_bottom.color-brand Преимущества
+        span.section__title.text-uppercase нашей продукции
+      .content
+        p Мы являемся производителями. Многолетний опыт работы в сфере производства модульных конструкций позволяет нам выпускать высококачественную продукцию.
+        p Изготовление происходит под строгим контролем, каждый наш вагончик получает свой индивидуальный паспорт и номер. Это дает возможность отслеживать всю цепочку его изготовления, знать всех непосредственных исполнителей.
+        p Есть некоторые технологические особенности, которые позволяют нашим бытовкам оставаться конкурентоспособными:
+        .list-counter.row
+          .content__section.col-xl-5.col-md-6
+            .content__section-heading
+              .content__section-picture
+                +img('content/bk.jpg','img-cover')
+            .content__section-desc
+              h4 Металлические двери российского производства
+              p Мы отказались от использования дверей из Китая, так как двери от наших поставщиков гораздо надежнее
+          .content__section.col-xl-5.offset-xl-1.col-md-6
+            .content__section-heading
+              .content__section-picture
+                +img('content/bk.jpg','img-cover')
+            .content__section-desc
+              h4 Металлические двери российского производства
+              p Мы отказались от использования дверей из Китая, так как двери от наших поставщиков гораздо надежнее
+          .content__section.col-xl-5.col-md-6
+            .content__section-heading
+              .content__section-picture
+                +img('content/bk.jpg','img-cover')
+            .content__section-desc
+              h4 Металлические двери российского производства
+              p Мы отказались от использования дверей из Китая, так как двери от наших поставщиков гораздо надежнее
+          .content__section.col-xl-5.offset-xl-1.col-md-6
+            .content__section-heading
+              .content__section-picture
+                +img('content/bk.jpg','img-cover')
+            .content__section-desc
+              h4 Металлические двери российского производства
+              p Мы отказались от использования дверей из Китая, так как двери от наших поставщиков гораздо надежнее
+      .d-flex.justify-content-center
+        a.btn.bg-brand(href="#") Подробнее

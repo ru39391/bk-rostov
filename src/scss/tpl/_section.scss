@@ -1,0 +1,85 @@
+.section {
+  overflow: hidden;
+
+  @include media-breakpoint-up(xl) {
+    @include py(60px);
+  }
+
+  @include media-breakpoint-between(md,lg) {
+    @include py(40px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include py(32px);
+  }
+}
+
+.section__heading {
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 65px;
+  }
+
+  @include media-breakpoint-between(md,lg) {
+    margin-bottom: 48px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 36px;
+  }
+
+  &.section__heading_mb_sm {
+    margin-bottom: 36px;
+  }
+}
+
+.section__title {
+  @include h1;
+
+  &.section__title_border_bottom {
+    @include before;
+    @include offset(0 0 12px,0 0 12px);
+
+    &:before {
+      @include wh(130px,4px);
+      left: -90px;
+      bottom: 0;
+      background-color: $color__brand;
+    }
+  }
+}
+
+.section__list {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 32px;
+  }
+}
+
+.section__list-item {
+  @extend %d-flex-ai-center;
+  @include h3;
+  line-height: $line-height__content;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 0 20px
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 0 16px
+  }
+}
+
+.section__list-icon {
+  @include media-breakpoint-up(md) {
+    @include fw(30px);
+    @include wh(30px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include fw(24px);
+    @include wh(24px);
+  }
+}

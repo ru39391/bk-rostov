@@ -17,3 +17,7 @@
 .pointer-events-none {
   pointer-events: none;
 }
+
+.list-counter {
+  counter-reset: section;
+}

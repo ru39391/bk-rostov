@@ -158,7 +158,7 @@
   &:before {
     @include wh(100%,4px);
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     opacity: 0;
     transition: all .3s ease;
     background-color: $color__brand;

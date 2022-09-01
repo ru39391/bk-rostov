@@ -1,0 +1,5 @@
+.gallery-grid__item {
+  @extend %d-flex-column;
+  max-height: 240px;
+  margin-bottom: $grid-gutter-width;
+}
