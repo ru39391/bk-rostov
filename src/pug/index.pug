@@ -117,7 +117,7 @@ block wrapper
         .section__title.section__title_border_bottom.color-brand Изготовление
         .section__title.text-uppercase.color-white Наше производство
       .blockquote.color-lighten.font-weight-medium
-        .d-flex.justify-content-end.mb-4
+        .d-flex.justify-content-end.mb-3.mb-sm-4
           +icon('quote','blockquote__icon color-brand')
         p Блок-контейнеры от производителя – продукт востребованный многими предприятиями, строительными компаниями и частными потребителями в . Потребность в блок-контейнерах нашего производства обусловлена высоким качеством выпускаемых модулей, их разнообразием и конкурентоспособной ценой.
       .features.row
@@ -141,6 +141,17 @@ block wrapper
               .features__desc Не отказываемся от гарантийных случаев. Мы дорожим каждым клиентом
       .d-flex.justify-content-center
         a.btn(href="#") Заказать услугу
+
+  //- .section.wrapper.text-center
+    .quiz
+      +img('content/gostiniczyi-iz-vagonchikov-001.jpg','quiz__bg')
+      .quiz__wrapper
+        .quiz__title Пройдите тест и получите
+          span.d-block.text-nowrap &nbsp;скидку на покупку блок-контейнера!
+        .quiz__desc Исходя из ваших ответов система подберет вам лучшие варианты бытовок,
+          span.d-block а также сформирует для вас спецпредложение на индивидуальных условиях!
+        .quiz__footer.d-flex.justify-content-center.w-100
+          button.btn.btn_sm.bg-brand(type="button") Начать
 
   //- .section.bg-light
     .wrapper
