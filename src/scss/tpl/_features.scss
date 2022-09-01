@@ -1,0 +1,48 @@
+.features {
+
+}
+
+.features__item {
+  display: flex;
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 54px;
+  }
+
+  @include media-breakpoint-between(md,lg) {
+    margin-bottom: 48px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 36px;
+  }
+}
+
+.features__icon {
+  @include media-breakpoint-up(lg) {
+    @include wh(60px);
+    @include fw(60px);
+    margin: 0 30px 0 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include wh(44px);
+    @include fw(44px);
+    margin: 0 24px 0 0;
+  }
+}
+
+.features__title {
+  @include h1;
+  font-weight: 600;
+  margin: 0 0 16px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+  }
+}
+
+.features__desc {
+  @include fs-lh(14px,1.2);
+  font-weight: 500;
+}

@@ -12,6 +12,18 @@
   @include media-breakpoint-down(sm) {
     @include py(32px);
   }
+
+  &.section_bg_circle {
+    @include before;
+
+    &:before {
+      @include wh(616px);
+      @include pos(-220px,-110px);
+      z-index: 1;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,.12);
+    }
+  }
 }
 
 .section__heading {

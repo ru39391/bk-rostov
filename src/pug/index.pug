@@ -30,7 +30,7 @@ block wrapper
       .swiper-pagination-bullet
       .swiper-pagination-bullet
 
-  .section
+  //- .section
     .wrapper
       .section__heading
         .section__title.section__title_border_bottom.color-brand Услуги компании
@@ -70,7 +70,7 @@ block wrapper
     .wrapper
       .divider__title Получить стоимость услуг
 
-  .section
+  //- .section
     .wrapper
       h1.section__heading.section__heading_mb_sm.d-flex.flex-column
         span.section__title.section__title_border_bottom.color-brand Преимущества
@@ -111,7 +111,38 @@ block wrapper
       .d-flex.justify-content-center
         a.btn.bg-brand(href="#") Подробнее
 
-  .section.bg-light
+  //- .section.section_bg_circle.bg-dark
+    .wrapper.zi-2
+      .section__heading.mb-2
+        .section__title.section__title_border_bottom.color-brand Изготовление
+        .section__title.text-uppercase.color-white Наше производство
+      .blockquote.color-lighten.font-weight-medium
+        .d-flex.justify-content-end.mb-4
+          +icon('quote','blockquote__icon color-brand')
+        p Блок-контейнеры от производителя – продукт востребованный многими предприятиями, строительными компаниями и частными потребителями в . Потребность в блок-контейнерах нашего производства обусловлена высоким качеством выпускаемых модулей, их разнообразием и конкурентоспособной ценой.
+      .features.row
+        .col-md-4
+          .features__item.color-white
+            +icon('plan','features__icon color-brand')
+            .features__wrapper
+              .features__title 4500 кв.
+              .features__desc Производственные площади, подтвержденные документально
+        .col-md-4
+          .features__item.color-white
+            +icon('calendar','features__icon color-brand')
+            .features__wrapper
+              .features__title 9 лет
+              .features__desc Работаем на рынке с 2012 года. Всегда соблюдаем заявленные сроки
+        .col-md-4
+          .features__item.color-white
+            +icon('engine','features__icon color-brand')
+            .features__wrapper
+              .features__title 100%
+              .features__desc Не отказываемся от гарантийных случаев. Мы дорожим каждым клиентом
+      .d-flex.justify-content-center
+        a.btn(href="#") Заказать услугу
+
+  //- .section.bg-light
     .wrapper
       .section__heading
         .section__title.text-uppercase.text-center Цены на продукцию
@@ -159,7 +190,7 @@ block wrapper
             .price__footer
               button.btn.btn_lg.bg-brand(href="#") Заказать
 
-  .section
+  //- .section
     .wrapper
       .section__heading
         .section__title.section__title_border_bottom.color-brand Нам доверяют
