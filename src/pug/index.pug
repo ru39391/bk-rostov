@@ -120,25 +120,25 @@ block wrapper
         .d-flex.justify-content-end.mb-3.mb-sm-4
           +icon('quote','blockquote__icon color-brand')
         p Блок-контейнеры от производителя – продукт востребованный многими предприятиями, строительными компаниями и частными потребителями в . Потребность в блок-контейнерах нашего производства обусловлена высоким качеством выпускаемых модулей, их разнообразием и конкурентоспособной ценой.
-      .features.row
+      .row
         .col-md-4
-          .features__item.color-white
-            +icon('plan','features__icon color-brand')
-            .features__wrapper
-              .features__title 4500 кв.
-              .features__desc Производственные площади, подтвержденные документально
+          .feature.color-white
+            +icon('plan','feature__icon color-brand')
+            .feature__wrapper
+              .feature__title 4500 кв.
+              .feature__desc Производственные площади, подтвержденные документально
         .col-md-4
-          .features__item.color-white
-            +icon('calendar','features__icon color-brand')
-            .features__wrapper
-              .features__title 9 лет
-              .features__desc Работаем на рынке с 2012 года. Всегда соблюдаем заявленные сроки
+          .feature.color-white
+            +icon('calendar','feature__icon color-brand')
+            .feature__wrapper
+              .feature__title 9 лет
+              .feature__desc Работаем на рынке с 2012 года. Всегда соблюдаем заявленные сроки
         .col-md-4
-          .features__item.color-white
-            +icon('engine','features__icon color-brand')
-            .features__wrapper
-              .features__title 100%
-              .features__desc Не отказываемся от гарантийных случаев. Мы дорожим каждым клиентом
+          .feature.color-white
+            +icon('engine','feature__icon color-brand')
+            .feature__wrapper
+              .feature__title 100%
+              .feature__desc Не отказываемся от гарантийных случаев. Мы дорожим каждым клиентом
       .d-flex.justify-content-center
         a.btn(href="#") Заказать услугу
 
@@ -229,3 +229,36 @@ block wrapper
           +img('content/logo/10.png')
         .mr-3.mr-md-5.mb-2
           +img('content/logo/11.png')
+
+  .section.section_bg_disk.bg-dark
+    .wrapper.zi-2
+      .section__heading.section__heading_mb_sm.d-flex.flex-wrap.align-items-end.justify-content-between
+        .mb-3.mb-lg-0
+          .section__title.section__title_border_bottom.color-brand Выполненные проекты
+          .section__title.text-uppercase.color-white фото завершённых объектов
+        a.btn.bg-brand(href="#") Все проекты
+      .row
+        .col-md-4.mb-4.mb-md-0
+          a.project(href="#")
+            +img('content/bk.jpg','img-cover')
+            span.project__wrapper
+              span.project__title Блок-контейнер для торговли
+              span.project__date
+                +icon('calendar','project__icon color-light mr-2')
+                | 20.06.2020 г.
+        .col-md-4.mb-4.mb-md-0
+          a.project(href="#")
+            +img('content/bk.jpg','img-cover')
+            span.project__wrapper
+              span.project__title Блок-контейнер для торговли
+              span.project__date
+                +icon('calendar','project__icon color-light mr-2')
+                | 20.06.2020 г.
+        .col-md-4
+          a.project(href="#")
+            +img('content/bk.jpg','img-cover')
+            span.project__wrapper
+              span.project__title Блок-контейнер для торговли
+              span.project__date
+                +icon('calendar','project__icon color-light mr-2')
+                | 20.06.2020 г.

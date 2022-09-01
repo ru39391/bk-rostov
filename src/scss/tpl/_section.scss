@@ -37,6 +37,31 @@
       }
     }
   }
+
+  &.section_bg_disk {
+    @extend .section_bg_circle;
+
+    &:before {
+      top: auto;
+      bottom: -50%;
+      border: 110px solid rgba(255,255,255,.1);
+      background-color: rgba(0,0,0,0);
+
+      @include media-breakpoint-up(xl) {
+        left: 88px;
+      }
+
+      @include media-breakpoint-between(md,lg) {
+        left: 64px;
+        border-width: 88px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        left: 48px;
+        border-width: 64px;
+      }
+    }
+  }
 }
 
 .section__heading {

@@ -1,4 +1,4 @@
-.features__item {
+.feature {
   display: flex;
 
   @include media-breakpoint-up(xl) {
@@ -14,7 +14,7 @@
   }
 }
 
-.features__icon {
+.feature__icon {
   @include media-breakpoint-up(lg) {
     @include wh(60px);
     @include fw(60px);
@@ -28,7 +28,7 @@
   }
 }
 
-.features__title {
+.feature__title {
   @include h1;
   font-weight: 600;
   margin: 0 0 16px;
@@ -38,7 +38,7 @@
   }
 }
 
-.features__desc {
+.feature__desc {
   @include fs-lh(14px,1.2);
   font-weight: 500;
 }

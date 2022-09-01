@@ -1,0 +1,37 @@
+.project {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  max-height: 390px;
+}
+
+.project__wrapper {
+  @extend %d-flex-column;
+  @include pos(0,0);
+  @include wh(100%);
+  color: #fff;
+  padding: 22px 32px;
+  justify-content: flex-end;
+  background: -moz-linear-gradient(top,  rgba(232,8,36,0.12) 0%, rgba(232,8,36,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(232,8,36,0.12) 0%,rgba(232,8,36,1) 100%);
+  background: linear-gradient(to bottom,  rgba(232,8,36,0.12) 0%,rgba(232,8,36,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fe80824', endColorstr='#e80824',GradientType=0 );
+}
+
+.project__title {
+  @include h4;
+  font-weight: 500;
+  line-height: $line-height__content;
+  margin: 0 0 16px;
+}
+
+.project__date {
+  @extend %d-flex-ai-center;
+  @include fs-lh(14px,1.2);
+}
+
+.project__icon {
+  @include wh(12px);
+  @include fw(12px);
+}
