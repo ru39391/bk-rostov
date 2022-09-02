@@ -10,6 +10,14 @@
   @include color($color__light !important);
 }
 
+.color-lighten {
+  @include color($color__lighten !important);
+}
+
+.color-dark {
+  @include color($color__dark !important);
+}
+
 .color-brand {
   @include color($color__brand !important);
 }

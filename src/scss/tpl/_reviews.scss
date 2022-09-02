@@ -1,0 +1,96 @@
+.reviews {
+  position: relative;
+
+  @include media-breakpoint-up(sm) {
+    @include px(64px);
+  }
+
+  @include media-breakpoint-only(xs) {
+    @include px(48px);
+  }
+}
+
+.reviews__item {
+  border-radius: 8px;
+  background-color: #f3f2f2;
+
+  @include media-breakpoint-up(sm) {
+    padding: 24px 24px 16px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    padding: 16px;
+  }
+
+  &.reviews__item_active {
+    .reviews__desc {
+      height: 100%;
+    }
+
+    .reviews__readmore-show {
+      display: none;
+    }
+
+    .reviews__readmore-hide {
+      display: block;
+    }
+  }
+}
+
+.reviews__title {
+  @include font(22px,700);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reviews__icon {
+  @include media-breakpoint-up(sm) {
+    @include wh(40px,30px);
+    @include fw(40px);
+  }
+
+  @include media-breakpoint-only(xs) {
+    @include wh(32px,24px);
+    @include fw(32px);
+  }
+}
+
+.reviews__desc {
+  line-height: $line-height__content;
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 0 16px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    height: 200px;
+    margin: 0 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.reviews__date {
+  @include font(14px,700);
+  color: $color__brand;
+}
+
+.reviews__readmore {
+  @extend %btn-default;
+  @include offset(0 0 12px,0 0 2px);
+  @include border(0 0 1px,rgba(0,0,0,.55),dashed);
+  font-size: 14px;
+  color: rgba(0,0,0,.55);
+
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+
+  @include media-breakpoint-only(xs) {
+    @include inline-block;
+  }
+}
+
+.reviews__readmore-hide {
+  display: none;
+}

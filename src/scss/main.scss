@@ -1,3 +1,4 @@
+@import '../../node_modules/swiper/swiper';
 @import '~bootstrap/scss/bootstrap-reboot.scss';
 @import '~bootstrap/scss/bootstrap-grid.scss';
 //@import '~bootstrap/scss/modal';
@@ -28,12 +29,18 @@
 @import 'tpl/form';
 @import 'tpl/page';
 @import 'tpl/logo';
+@import 'tpl/quiz';
+@import 'tpl/price';
+@import 'tpl/swiper';
 @import 'tpl/header';
 @import 'tpl/footer';
 @import 'tpl/wrapper';
 @import 'tpl/section';
 @import 'tpl/pathway';
 @import 'tpl/content';
+@import 'tpl/project';
+@import 'tpl/reviews';
+@import 'tpl/feature';
 @import 'tpl/contacts';
-@import 'tpl/price';
+@import 'tpl/blockquote';
 @import 'tpl/gallery-grid';
