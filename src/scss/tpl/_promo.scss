@@ -1,0 +1,99 @@
+.promo {
+  position: relative;
+  color: #fff;
+
+  @include media-breakpoint-up(lg) {
+    max-height: 500px;
+  }
+}
+
+.promo__picture {
+  @include before;
+  @include wh(50%,100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:before {
+    @include pos(0,0);
+    @include wh(100%);
+    background: -moz-linear-gradient(left,  $color__dark 0%, rgba(37,37,37,0.1) 100%);
+    background: -webkit-linear-gradient(left,  $color__dark 0%,rgba(37,37,37,0.1) 100%);
+    background: linear-gradient(to right,  $color__dark 0%,rgba(37,37,37,0.1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252525', endColorstr='#1a252525',GradientType=1 );
+  }
+}
+
+.promo__wrapper {
+  height: 100%;
+
+  @include media-breakpoint-up(md) {
+    @include px(64px);
+    @include py(54px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include py(32px);
+  }
+}
+
+.promo__title {
+  @include h1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 0 32px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    @include fs-lh(24px,$line-height__content);
+    margin: 0 0 24px;
+  }
+}
+
+.promo__price {
+  @include h4;
+  font-weight: 600;
+  line-height: $line-height__content;
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 0 20px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    margin: 0 0 16px;
+  }
+}
+
+.promo__price-value {
+  @include h3;
+  color: $color__brand;
+}
+
+.promo__list {
+  @include media-breakpoint-up(sm) {
+    margin: 0 0 40px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    margin: 0 0 32px;
+  }
+}
+
+.promo__list-item {
+  margin: 0 0 8px;
+  font-weight: 500;
+  line-height: $line-height__content;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: '—';
+    font-weight: 700;
+    margin: 0 8px 0 0;
+  }
+}

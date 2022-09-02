@@ -5,30 +5,40 @@ block meta
   - var title = 'Главная';
 
 block wrapper
-  //- .promo.swiper-container
-    .swiper-wrapper
-      .swiper-slide
+  .promo.swiper
+    .swiper-wrapper.mb-md-4
+      .swiper-slide.h-auto.bg-dark
         .promo__picture
-          +img('content/promo.jpg','img-cover')
-        .wrapper
-          .promo__title Модульные двухэтажные АБК жилые, офисные, штабы строительства
-          .promo__price Цена
-            .promo__price-value от 9 500 руб/м
-          ul.promo__list
-            li.promo__list-item изготовление, монтаж и сборка кровли от 10 рабочих дней
-            li.promo__list-item выполнение под ключ или "шеф монтаж"
-          a.btn.btn-danger(href="#") Подробнее
-    .swiper-nav
-      button.swiper-button.swiper-button-prev(type="button")
-        +icon('arrow-prev')
-      button.swiper-button.swiper-button-next(type="button")
-        +icon('arrow-next')
-    .swiper-pagination
-      .swiper-pagination-bullet
-      .swiper-pagination-bullet.swiper-pagination-bullet-active
-      .swiper-pagination-bullet
-      .swiper-pagination-bullet
-      .swiper-pagination-bullet
+          +img('content/gostiniczyi-iz-vagonchikov-001.jpg','img-cover')
+        .promo__wrapper
+          .wrapper.d-flex.h-100.px-0
+            .col-xl-8.col-lg-9.col-md-11.d-flex.flex-column.justify-content-center
+              .promo__title Модульные двухэтажные АБК жилые
+              .promo__price Цена
+                .promo__price-value от 9 500 руб/м
+              ul.promo__list
+                li.promo__list-item изготовление, монтаж и сборка кровли от 10 рабочих дней
+                li.promo__list-item выполнение под ключ или "шеф монтаж"
+              a.btn.bg-brand(href="#") Подробнее
+      .swiper-slide.h-auto.bg-dark
+        .promo__picture
+          +img('content/gostiniczyi-iz-vagonchikov-001.jpg','img-cover')
+        .promo__wrapper
+          .wrapper.d-flex.h-100.px-0
+            .col-xl-8.col-lg-9.col-md-11.d-flex.flex-column.justify-content-center
+              .promo__title Модульные двухэтажные АБК жилые, офисные, штабы строительства
+              .promo__price Цена
+                .promo__price-value от 9 500 руб/м
+              ul.promo__list
+                li.promo__list-item изготовление, монтаж и сборка кровли от 10 рабочих дней
+                li.promo__list-item выполнение под ключ или "шеф монтаж"
+              a.btn.bg-brand(href="#") Подробнее
+    .swiper-nav.d-none.d-md-block
+      button.swiper-nav__item.swiper-nav__item_dir_prev.color-light.ml-3(type="button")
+        +icon('arrow-left')
+      button.swiper-nav__item.swiper-nav__item_dir_next.color-light.mr-3(type="button")
+        +icon('arrow-right')
+    .swiper-pagination.d-none.d-md-block
 
   .section
     .wrapper

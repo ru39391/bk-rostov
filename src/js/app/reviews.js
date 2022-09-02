@@ -18,7 +18,7 @@ if(reviewsEl) {
       nextEl: reviewsEl.parentNode.querySelector(scrollerConfig.scrollerBtnNextSelector),
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: reviewsEl.parentNode.querySelector(scrollerConfig.scrollerPagination),
       clickable: true
     },
     breakpoints: {
