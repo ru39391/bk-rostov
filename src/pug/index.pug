@@ -30,7 +30,7 @@ block wrapper
       .swiper-pagination-bullet
       .swiper-pagination-bullet
 
-  //- .section
+  .section
     .wrapper
       .section__heading
         .section__title.section__title_border_bottom.color-brand Услуги компании
@@ -70,7 +70,7 @@ block wrapper
     .wrapper
       .divider__title Получить стоимость услуг
 
-  //- .section
+  .section
     .wrapper
       h1.section__heading.section__heading_mb_sm.d-flex.flex-column
         span.section__title.section__title_border_bottom.color-brand Преимущества
@@ -111,7 +111,7 @@ block wrapper
       .d-flex.justify-content-center
         a.btn.bg-brand(href="#") Подробнее
 
-  //- .section.section_bg_circle.bg-dark
+  .section.section_bg_circle.bg-dark
     .wrapper.zi-2
       .section__heading.mb-2
         .section__title.section__title_border_bottom.color-brand Изготовление
@@ -142,7 +142,7 @@ block wrapper
       .d-flex.justify-content-center
         a.btn(href="#") Заказать услугу
 
-  //- .section.wrapper.text-center
+  .section.wrapper.text-center
     .quiz
       +img('content/gostiniczyi-iz-vagonchikov-001.jpg','quiz__bg')
       .quiz__wrapper
@@ -153,7 +153,7 @@ block wrapper
         .quiz__footer.d-flex.justify-content-center.w-100
           button.btn.btn_sm.bg-brand(type="button") Начать
 
-  //- .section.bg-light
+  .section.bg-light
     .wrapper
       .section__heading
         .section__title.text-uppercase.text-center Цены на продукцию
@@ -201,7 +201,7 @@ block wrapper
             .price__footer
               button.btn.btn_lg.bg-brand(href="#") Заказать
 
-  //- .section
+  .section
     .wrapper
       .section__heading
         .section__title.section__title_border_bottom.color-brand Нам доверяют
@@ -234,13 +234,49 @@ block wrapper
     .wrapper
       .section__heading.section__heading_mb_sm
         .section__title.text-uppercase.text-center.color-white Отзывы
-      .reviews.swiper
-        .swiper-wrapper
-          .swiper-slide
-            .reviews__item
-              .reviews__title Офисный вагончик
-              .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
-              .reviews__date 16.09.2021 г.
+      .reviews
+        .reviews__slides.swiper
+          .swiper-wrapper.mb-4
+            .swiper-slide
+              .reviews__item
+                .d-flex.align-items-center.justify-content-between.mb-2
+                  .reviews__title.mr-sm-4 Офисный вагончик
+                  +icon('quote','reviews__icon color-brand d-none d-sm-block')
+                .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
+                button.reviews__readmore(type="button")
+                  span.reviews__readmore-show Читать полностью
+                  span.reviews__readmore-hide Скрыть
+                .reviews__date 16.09.2021 г.
+            .swiper-slide
+              .reviews__item
+                .d-flex.align-items-center.justify-content-between.mb-2
+                  .reviews__title.mr-sm-4 Офисный вагончик
+                  +icon('quote','reviews__icon color-brand d-none d-sm-block')
+                .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
+                button.reviews__readmore(type="button")
+                  span.reviews__readmore-show Читать полностью
+                  span.reviews__readmore-hide Скрыть
+                .reviews__date 16.09.2021 г.
+            .swiper-slide
+              .reviews__item
+                .d-flex.align-items-center.justify-content-between.mb-2
+                  .reviews__title.mr-sm-4 Офисный вагончик
+                  +icon('quote','reviews__icon color-brand d-none d-sm-block')
+                .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
+                button.reviews__readmore(type="button")
+                  span.reviews__readmore-show Читать полностью
+                  span.reviews__readmore-hide Скрыть
+                .reviews__date 16.09.2021 г.
+            .swiper-slide
+              .reviews__item
+                .d-flex.align-items-center.justify-content-between.mb-2
+                  .reviews__title.mr-sm-4 Офисный вагончик
+                  +icon('quote','reviews__icon color-brand d-none d-sm-block')
+                .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
+                button.reviews__readmore(type="button")
+                  span.reviews__readmore-show Читать полностью
+                  span.reviews__readmore-hide Скрыть
+                .reviews__date 16.09.2021 г.
         .swiper-nav
           button.swiper-nav__item.swiper-nav__item_dir_prev(type="button")
             +icon('arrow-left')
@@ -249,7 +285,7 @@ block wrapper
         .swiper-pagination
 
 
-  //- .section.section_bg_disk.bg-dark
+  .section.section_bg_disk.bg-dark
     .wrapper.zi-2
       .section__heading.section__heading_mb_sm.d-flex.flex-wrap.align-items-end.justify-content-between
         .mb-3.mb-lg-0
