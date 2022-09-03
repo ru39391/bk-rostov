@@ -10,14 +10,18 @@
 
     .quiz__progress {
       opacity: 1;
+      transition: all .3s ease .3s;
     }
 
     .quiz__prev {
       opacity: 1;
+      pointer-events: all;
+      transition: all .3s ease .3s;
     }
 
     .quiz__pagination {
       opacity: 1;
+      transition: all .3s ease .3s;
     }
   }
 }
@@ -38,7 +42,6 @@
   overflow: hidden;
   position: relative;
   padding: 32px 24px;
-  opacity: 0;
   transition: all .3s ease;
 
   &.quiz__pane_bg_white {
@@ -47,8 +50,6 @@
   }
 
   &.quiz__pane_active {
-    opacity: 1;
-
     .quiz__subtitle {
       opacity: 1;
       transform: translateX(0);
@@ -126,7 +127,6 @@
   color: $color__brand;
   opacity: 0;
   pointer-events: none;
-  transition: all .3s ease .3s;
 }
 
 .quiz__pagination {
@@ -138,7 +138,6 @@
   opacity: 0;
   color: $color__light;
   pointer-events: none;
-  transition: all .3s ease .3s;
 }
 
 .quiz__pagination-current {
@@ -154,7 +153,6 @@
   opacity: 0;
   border-radius: 16px;
   pointer-events: none;
-  transition: all .3s ease .3s;
   background-color: $color__light;
 }
 
@@ -165,6 +163,6 @@
   width: 0;
   color: #fff;
   overflow: hidden;
-  transition: all .4s ease .3s;
+  transition: all .8s ease .3s;
   background-color: $color__brand;
 }

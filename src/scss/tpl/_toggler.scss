@@ -1,0 +1,35 @@
+.toggler {
+  @include wh(0);
+  @include pos(0,0);
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+
+  &:checked {
+    & + .toggler-title_type_radio {
+      &:before {
+        background-color: $color__brand;
+      }
+    }
+  }
+}
+
+.toggler-title {
+  @extend %d-flex-ai-center;
+  @include before;
+  cursor: pointer;
+  margin-bottom: 0;
+
+  &.toggler-title_type_radio {
+    &:before {
+      @include wh(24px,24px);
+      position: static;
+      margin: 0 16px 0 0;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      background-color: $color__disabled;
+      box-shadow: 0 0 0 1px $color__disabled;
+    }
+  }
+}
