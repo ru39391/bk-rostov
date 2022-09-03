@@ -18,6 +18,10 @@
   @include color($color__warning !important);
 }
 
+.color-danger {
+  @include color($color__danger !important);
+}
+
 .color-white {
   @include color(#fff !important);
 }

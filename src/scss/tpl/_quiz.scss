@@ -1,12 +1,37 @@
 .quiz {
-  @include inline-block;
+  @include before;
   overflow: hidden;
-  position: relative;
   transition: all .3s ease;
+
+  @include media-breakpoint-up(lg) {
+    @include inline-block;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:before {
+    transition: all .3s ease;
+
+    @include media-breakpoint-down(md) {
+      @include wh(100%);
+      @include pos(0,0);
+      z-index: 2;
+      background-color: rgba(0,0,0,.72);
+    }
+  }
 
   &.quiz_active {
     border-radius: 8px;
     box-shadow: 0 0 40px 0 rgba(0,0,0,.2);
+
+    &:before {
+      @include media-breakpoint-down(md) {
+        background-color: #fff;
+      }
+    }
 
     .quiz__progress {
       opacity: 1;
@@ -26,13 +51,36 @@
   }
 }
 
+.quiz__bg {
+  @include media-breakpoint-up(lg) {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include wh(100%);
+    @include pos(0,0);
+    z-index: 1;
+    object-fit: cover;
+  }
+}
+
 .quiz__wrapper {
-  @include wh(100%);
-  @include pos(0,0);
   display: flex;
   color: #fff;
   transition: all .3s ease;
-  background-color: rgba(0,0,0,.72);
+
+  @include media-breakpoint-up(lg) {
+    @include wh(100%);
+    @include pos(0,0);
+    background-color: rgba(0,0,0,.72);
+  }
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    z-index: 3;
+    order: 2;
+  }
 }
 
 .quiz__pane {
@@ -40,13 +88,26 @@
   @extend %d-flex-centered;
   @include fw(100%);
   overflow: hidden;
-  position: relative;
-  padding: 32px 24px;
   transition: all .3s ease;
+
+  @include media-breakpoint-up(lg) {
+    padding: 32px 24px;
+  }
+
+  @include media-breakpoint-between(sm,md) {
+    padding: 16px 24px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    padding: 16px;
+  }
 
   &.quiz__pane_bg_white {
     color: $color__default;
-    background-color: #fff;
+
+    @include media-breakpoint-up(lg) {
+      background-color: #fff;
+    }
   }
 
   &.quiz__pane_active {
@@ -79,6 +140,10 @@
   @include media-breakpoint-down(sm) {
     margin-bottom: 28px;
   }
+
+  @include media-breakpoint-only(xs) {
+    font-size: 24px;
+  }
 }
 
 .quiz__subtitle {
@@ -94,6 +159,10 @@
 
   @include media-breakpoint-down(sm) {
     margin-bottom: 18px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    font-size: 22px;
   }
 }
 
@@ -120,40 +189,70 @@
   transition: opacity .9s ease .7s,  transform .4s ease .6s;
 }
 
+.quiz__nav {
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    align-items: center;
+  }
+
+  @include media-breakpoint-only(lg) {
+    @include pos(24px,24px);
+    right: 24px;
+  }
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    z-index: 3;
+    order: 1;
+  }
+
+  @include media-breakpoint-between(sm,md) {
+    padding: 24px 24px 0;
+  }
+
+  @include media-breakpoint-only(xs) {
+    padding: 24px 16px 0;
+  }
+}
+
 .quiz__prev {
   @extend %btn-default;
   @include wh(32px);
-  @include pos(24px,24px);
   color: $color__brand;
   opacity: 0;
   pointer-events: none;
-}
 
-.quiz__pagination {
-  @include fs-lh(72px,1);
-  font-weight: 600;
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  opacity: 0;
-  color: $color__light;
-  pointer-events: none;
-}
+  @include media-breakpoint-up(xl) {
+    @include pos(24px,24px);
+  }
 
-.quiz__pagination-current {
-  font-size: 104px;
+  @include media-breakpoint-between(sm,lg) {
+    margin: 0 32px 0 0;
+  }
+
+  @include media-breakpoint-only(xs) {
+    margin: 0 24px 0 0;
+  }
 }
 
 .quiz__progress {
-  @include wh(100%/12*8,22px);
-  @include pos(64px,50%);
-  margin: 0 0 0 (-100%/12*4);
   display: flex;
   overflow: hidden;
   opacity: 0;
   border-radius: 16px;
   pointer-events: none;
   background-color: $color__light;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.05) inset;
+
+  @include media-breakpoint-up(xl) {
+    @include wh(100%/12*8,22px);
+    @include pos(64px,50%);
+    margin: 0 0 0 (-100%/12*4);
+  }
+
+  @include media-breakpoint-down(lg) {
+    flex-grow: 1;
+  }
 }
 
 .quiz__progress-runner {
@@ -165,4 +264,51 @@
   overflow: hidden;
   transition: all .8s ease .3s;
   background-color: $color__brand;
+
+  @include media-breakpoint-down(lg) {
+    @include py(2px);
+  }
+}
+
+.quiz__pagination {
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  color: $color__light;
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  @include media-breakpoint-down(md) {
+    text-align: right;
+    position: relative;
+    z-index: 3;
+    order: 3;
+  }
+
+  @include media-breakpoint-up(sm) {
+    @include fs-lh(72px,1);
+  }
+
+  @include media-breakpoint-between(sm,md) {
+    padding: 0 24px 24px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    @include fs-lh(56px,1);
+    padding: 0 16px 24px;
+  }
+}
+
+.quiz__pagination-current {
+  @include media-breakpoint-up(sm) {
+    font-size: 104px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    font-size: 72px;
+  }
 }

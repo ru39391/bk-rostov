@@ -89,7 +89,7 @@ export class Quiz {
     });
 
     this._quizPanesArr.forEach((pane, paneIndex, panesArr) => {
-      const togglersArray = Array.from(pane.querySelectorAll('.toggler'));
+      const togglersArray = Array.from(pane.querySelectorAll(this._togglerSel));
       if(togglersArray.length) {
         togglersArray.forEach((toggler, togglerIndex, togglerArr) => {
           toggler.addEventListener('change', e => {

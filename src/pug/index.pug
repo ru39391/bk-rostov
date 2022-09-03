@@ -154,13 +154,13 @@ block wrapper
 
   .section.wrapper.text-center
     .quiz
-      +img('content/gostiniczyi-iz-vagonchikov-001.jpg','quiz__bg img-fluid')
+      +img('content/gostiniczyi-iz-vagonchikov-001.jpg','quiz__bg')
       form.quiz__wrapper(action="#" method="post")
         .quiz__pane.quiz__pane_active
           .quiz__title Пройдите тест и получите
-            span.d-block.text-nowrap &nbsp;скидку на покупку блок-контейнера!
+            span.d-block &nbsp;скидку на покупку блок-контейнера!
           .quiz__desc Исходя из ваших ответов система подберет вам лучшие варианты бытовок,
-            span.d-block а также сформирует для вас спецпредложение на индивидуальных условиях!
+            span.d-lg-block а также сформирует для вас спецпредложение на индивидуальных условиях!
           .quiz__footer.d-flex.justify-content-center.w-100
             button.quiz__next.btn.btn_sm.bg-brand(type="button") Начать
         .quiz__pane.quiz__pane_bg_white
@@ -203,25 +203,28 @@ block wrapper
           .quiz__subtitle Укажите телефон и выберите способ связи
           .quiz__desc.d-flex
             .form
-              input.form__field(type="text" value="" placeholder="+7 (___) ___-__-__" required)
+              .form__item
+                input.form__field(type="text" value="" placeholder="+7 (___) ___-__-__" required)
+                .form__error.d-none Пожалуйста, введите номер телефона
           .quiz__desc.d-flex.flex-column.align-items-start
             .row
-              .col-md-6.d-flex.flex-column.align-items-start
+              .col-sm-6.d-flex.flex-column.align-items-start
                 input.toggler(type="radio" name="pane__5" id="pane__5_1")
                 label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_1") Звонок
                 input.toggler(type="radio" name="pane__5" id="pane__5_2")
                 label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_2") SMS
-              .col-md-6.d-flex.flex-column.align-items-start
+              .col-sm-6.d-flex.flex-column.align-items-start
                 input.toggler(type="radio" name="pane__5" id="pane__5_3")
                 label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_3") WhatsApp
                 input.toggler(type="radio" name="pane__5" id="pane__5_4")
                 label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_4") Telegram
           .quiz__footer.d-flex.justify-content-center.w-100
             button.quiz__submit.btn.btn_sm.bg-brand(type="submit" disabled) Отправить
-      button.quiz__prev(type="button")
-        +icon('arrow')
-      .quiz__progress
-        .quiz__progress-runner 50%
+      .quiz__nav
+        button.quiz__prev(type="button")
+          +icon('arrow')
+        .quiz__progress
+          .quiz__progress-runner
       .quiz__pagination
         span.quiz__pagination-current 01
         span.quiz__pagination-total &nbsp;/ 05
