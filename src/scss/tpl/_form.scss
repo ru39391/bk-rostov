@@ -1,0 +1,20 @@
+.form__item {
+  position: relative;
+}
+
+.form__field {
+  @include wh(100%,36px);
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid $color__border;
+  background-color: #fff;
+}
+
+.form__error {
+  @include pos(100%,0);
+  width: 100%;
+  margin: 4px 0 0;
+  font-size: 12px;
+  text-align: left;
+  color: $color__danger;
+}

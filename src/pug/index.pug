@@ -5,7 +5,7 @@ block meta
   - var title = 'Главная';
 
 block wrapper
-  .promo.swiper
+  //- .promo.swiper
     .swiper-wrapper.mb-md-4
       .swiper-slide.h-auto.bg-dark
         .promo__picture
@@ -40,7 +40,7 @@ block wrapper
         +icon('arrow-right')
     .swiper-pagination.d-none.d-md-block
 
-  .section
+  //- .section
     .wrapper
       .section__heading
         .section__title.section__title_border_bottom.color-brand Услуги компании
@@ -80,7 +80,7 @@ block wrapper
     .wrapper
       .divider__title Получить стоимость услуг
 
-  .section
+  //- .section
     .wrapper
       h1.section__heading.section__heading_mb_sm.d-flex.flex-column
         span.section__title.section__title_border_bottom.color-brand Преимущества
@@ -121,7 +121,7 @@ block wrapper
       .d-flex.justify-content-center
         a.btn.bg-brand(href="#") Подробнее
 
-  .section.section_bg_circle.bg-dark
+  //- .section.section_bg_circle.bg-dark
     .wrapper.zi-2
       .section__heading.mb-2
         .section__title.section__title_border_bottom.color-brand Изготовление
@@ -155,13 +155,79 @@ block wrapper
   .section.wrapper.text-center
     .quiz
       +img('content/gostiniczyi-iz-vagonchikov-001.jpg','quiz__bg')
-      .quiz__wrapper
-        .quiz__title Пройдите тест и получите
-          span.d-block.text-nowrap &nbsp;скидку на покупку блок-контейнера!
-        .quiz__desc Исходя из ваших ответов система подберет вам лучшие варианты бытовок,
-          span.d-block а также сформирует для вас спецпредложение на индивидуальных условиях!
-        .quiz__footer.d-flex.justify-content-center.w-100
-          button.btn.btn_sm.bg-brand(type="button") Начать
+      form.quiz__wrapper(action="#" method="post")
+        .quiz__pane.quiz__pane_active
+          .quiz__title Пройдите тест и получите
+            span.d-block &nbsp;скидку на покупку блок-контейнера!
+          .quiz__desc Исходя из ваших ответов система подберет вам лучшие варианты бытовок,
+            span.d-lg-block а также сформирует для вас спецпредложение на индивидуальных условиях!
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button") Начать
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Вы являетесь физическим или юридическим лицом?
+          .quiz__desc.d-flex.flex-column.align-items-start
+            input.toggler(type="radio" name="pane__1" id="pane__1_1")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__1_1") Физическое лицо
+            input.toggler(type="radio" name="pane__1" id="pane__1_2")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__1_2") Юридическое лицо
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button" disabled) Далее
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Заказывали ли Вы нашу продукцию или делаете это впервые?
+          .quiz__desc.d-flex.flex-column.align-items-start
+            input.toggler(type="radio" name="pane__2" id="pane__2_1")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__2_1") Да, заказывал
+            input.toggler(type="radio" name="pane__2" id="pane__2_2")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__2_2") Заказываю впервые
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button" disabled) Далее
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Как Вы планируете забирать заказ, силами нашего автотранспорта или самовывозом?
+          .quiz__desc.d-flex.flex-column.align-items-start
+            input.toggler(type="radio" name="pane__3" id="pane__3_1")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__3_1") Транспорт поставщика
+            input.toggler(type="radio" name="pane__3" id="pane__3_2")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__3_2") Самовывоз
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button" disabled) Далее
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Хотели бы Вы рассмотреть сотрудничество на постоянной основе как ДИЛЕР нашей компании?
+          .quiz__desc.d-flex.flex-column.align-items-start
+            input.toggler(type="radio" name="pane__4" id="pane__4_1")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__4_1") Да, хочу
+            input.toggler(type="radio" name="pane__4" id="pane__4_2")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__4_2") Нет, не интересует
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button" disabled) Далее
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Укажите телефон и выберите способ связи
+          .quiz__desc.d-flex
+            .form
+              .form__item
+                input.form__field(type="text" value="" placeholder="+7 (___) ___-__-__" required)
+                .form__error.d-none Пожалуйста, введите номер телефона
+          .quiz__desc.d-flex.flex-column.align-items-start
+            .row
+              .col-sm-6.d-flex.flex-column.align-items-start
+                input.toggler(type="radio" name="pane__5" id="pane__5_1")
+                label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_1") Звонок
+                input.toggler(type="radio" name="pane__5" id="pane__5_2")
+                label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_2") SMS
+              .col-sm-6.d-flex.flex-column.align-items-start
+                input.toggler(type="radio" name="pane__5" id="pane__5_3")
+                label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_3") WhatsApp
+                input.toggler(type="radio" name="pane__5" id="pane__5_4")
+                label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_4") Telegram
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__submit.btn.btn_sm.bg-brand(type="submit" disabled) Отправить
+      .quiz__nav
+        button.quiz__prev(type="button")
+          +icon('arrow')
+        .quiz__progress
+          .quiz__progress-runner
+      .quiz__pagination
+        span.quiz__pagination-current 01
+        span.quiz__pagination-total &nbsp;/ 05
 
   .section.bg-light
     .wrapper

@@ -21,4 +21,10 @@
     height: 48px;
     max-width: 220px;
   }
+
+  &:disabled {
+    cursor: default;
+    text-shadow: 0 1px 5px rgba(0,0,0,.1);
+    background-color: $color__disabled !important;
+  }
 }

@@ -14,6 +14,10 @@
   background-color: $color__warning !important;
 }
 
+.bg-danger {
+  background-color: $color__danger !important;
+}
+
 .bg-white {
   background-color: #fff !important;
 }
@@ -26,7 +30,10 @@
   background-color: $color__lighten !important;
 }
 
+.bg-disabled {
+  background-color: $color__disabled !important;
+}
+
 .bg-dark {
   background-color: $color__dark !important;
 }
-

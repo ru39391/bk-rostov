@@ -19,6 +19,7 @@
 @import 'base/img';
 @import 'base/text';
 @import 'base/color';
+@import 'base/border';
 @import 'base/width';
 @import 'base/height';
 @import 'base/mixes';
@@ -26,10 +27,11 @@
 /* tpl */
 @import 'tpl/btn';
 @import 'tpl/nav';
-@import 'tpl/form';
 @import 'tpl/page';
 @import 'tpl/logo';
+@import 'tpl/form';
 @import 'tpl/swiper';
+@import 'tpl/toggler';
 @import 'tpl/quiz';
 @import 'tpl/price';
 @import 'tpl/promo';
