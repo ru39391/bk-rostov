@@ -1,6 +1,6 @@
 footer.footer
-  .footer__map.col-xl-5.offset-xl-1.col-lg-6.pr-0.pl-xl-0
-    //- script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74758b5ee4465194e02a444d5c93601d3a5240432e973a93791a8e41dc5c7c95&width=100%25&height=100%&lang=ru_RU&scroll=false")
+  .footer__map.col-xl-5.offset-xl-1.col-lg-6.pr-0.pl-xl-0.d-none
+    script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74758b5ee4465194e02a444d5c93601d3a5240432e973a93791a8e41dc5c7c95&width=100%25&height=100%&lang=ru_RU&scroll=false")
   .wrapper.d-lg-flex.flex-wrap.px-0
     .col-lg-6
       .footer__section
@@ -18,10 +18,58 @@ footer.footer
             span.contacts__icon
               +icon('email')
             span.contacts__title rostov-blok@yandex.ru
-      .footer__section
+      .footer__section.d-none
         .footer__subtitle Остались вопросы?
-        button.btn(type="button") Заказать звонок
+        button.btn(type="button" data-toggle="modal" data-target="#callorder") Заказать звонок
       .footer__text.font-weight-normal
         p.mb-0 &copy; Блок-контейнеры от производителя Ростов-на-Дону, 2020 - 2021.
           br
           a.tdec-underline.color-white(href="#") Политика обработки персональных данных
+    .col-xl-4.offset-xl-1.col-lg-6
+      .footer__subtitle Остались вопросы?
+      form.form(action="#" method="post")
+        .form__item.mb-3.mb-md-4
+          .h5.mb-2 Ваше имя
+          input.form__field.form__field_bg_brand(type="text" value="" placeholder="Имя Фамилия")
+        .form__item.mb-4
+          .h5.mb-2 Ваш телефон *
+          input.form__field.form__field_bg_brand(type="text" value="" name="phone" placeholder="+7 (___) ___-__-__" required)
+          .form__error.color-white.d-none Пожалуйста, введите номер телефона
+        .h6.font-weight-light.text-center.mb-4 Нажимая кнопку, вы соглашаетесь на обработку персональных данных в соответствии с нашей
+          a.tdec-underline.color-white(href="#") &nbsp;политикой конфиденциальности.
+        .d-flex.justify-content-center
+          button.btn(type="submit") отправить
+
+#callorder.modal.fade
+  .modal-dialog
+    .modal-content.border-0
+      .modal-header.d-flex.align-items-center.justify-content-between
+        .h3.font-weight-bold.mr-3 Заказать звонок
+        button.btn.btn_close.btn_unstyled.color-disabled.p-0(type="button" data-dismiss="modal")
+          +icon('close')
+      .modal-body
+        form.form(action="#" method="post")
+          .form__item.mb-3.mb-md-4
+            .h5.mb-2 Ваше имя
+            input.form__field(type="text" value="" placeholder="Имя Фамилия")
+          .form__item.mb-3.mb-md-4
+            .h5.mb-2 Ваш телефон
+              span.color-brand &nbsp;*
+            input.form__field(type="text" value="" name="phone" placeholder="+7 (___) ___-__-__" required)
+            .form__error.d-none Пожалуйста, введите номер телефона
+          .h6.font-weight-light.text-center.mb-4 Нажимая кнопку, вы соглашаетесь на обработку персональных данных в соответствии с нашей
+            a.tdec-underline(href="#") &nbsp;политикой конфиденциальности.
+          .d-flex.justify-content-center
+            button.btn(type="submit") отправить
+
+#success.modal.fade
+  .modal-dialog
+    .modal-content.border-0
+      .modal-header.d-flex.align-items-center.justify-content-between
+        .h3.font-weight-bold.mr-3 Сообщение отправлено
+        button.btn.btn_close.btn_unstyled.color-disabled.p-0(type="button" data-dismiss="modal")
+          +icon('close')
+      .modal-body
+        .h4.text-center.mb-4 Менеджеры компании свяжутся с вами в бижайшее время для уточнения деталей.
+        .d-flex.justify-content-center
+          button.btn.w-auto.h-auto.p-3(type="submit" data-dismiss="modal") ok
