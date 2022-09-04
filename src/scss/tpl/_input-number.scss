@@ -11,6 +11,11 @@
   @include fs-lh(14px,$line-height__content);
   border-radius: 4px;
   justify-content: center;
+
+  &.input-number__counter_active {
+    color: $color__default;
+    background-color: #fff;
+  }
 }
 
 .input-number__toggler {
@@ -33,5 +38,5 @@
 }
 
 .input-number__field {
-  //display: none;
+  display: none;
 }

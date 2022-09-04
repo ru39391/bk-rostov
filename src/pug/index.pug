@@ -81,140 +81,226 @@ block wrapper
       .section__heading.section__heading_mb_sm
         .section__title.text-center.color-white Получить стоимость услуг
       form.form(action="#" method="post")
-        .row.mb-2
+        .row.mb-3
           .col-md-4.mb-3
-            //-
             .h3.color-white.mb-3 Опишите техническое задание
-            textarea.form__field.form__field_type_textarea.form__field_bg_brand.mb-4
-            //-
+            textarea.form__field.form__field_type_textarea.form__field_bg_brand
+          .col-md-8.mb-3
+            .h3.color-white.mb-3 Размер блок-контейнера
+            .row
+              .col-md-4.d-flex.align-items-center
+                input.form__field.form__field_bg_brand.mr-2(type="text" value="" placeholder="Длина")
+                span.color-white м
+              .col-md-4.d-flex.align-items-center
+                input.form__field.form__field_bg_brand.mr-2(type="text" value="" placeholder="Ширина")
+                span.color-white м
+              .col-md-4.d-flex.align-items-center
+                input.form__field.form__field_bg_brand.mr-2(type="text" value="" placeholder="Высота")
+                span.color-white м
+        .row.mb-3
+          .col-md-4.mb-3
             .h3.color-white.mb-3 Или загрузите файл
             input(class="form__uploader" type="file" id="mainform__file" name="mainform__file" accept=".pdf,.doc,.docx,.xls,.xlsx")
-            label.form__title.color-white.mb-3(for="mainform__file")
+            label.form__title.color-white(for="mainform__file")
               +icon('paper-clip','form__icon mr-2')
               | Прикрепить файл
-            .form__uploader-meta
+            .form__uploader-meta.pt-3
               .form__uploader-title.mb-2 Прикреплённые файлы:
               .form__uploader-filename.color-white.mb-2
               button.form__uploader-reset(type="button")
                 span.h3.mr-2 &times;
                 | Удалить
-          .col-md-3.mb-3
-            .h3.color-white.mb-3 Размер блок-контейнера
-            .row.align-items-center.mb-4
-              .col-1.pr-0
-                span.h4.color-white Д
-              .col-11.d-flex.align-items-center
-                input.form__field.form__field_bg_brand.mr-2(type="text" value="" placeholder="2,5")
-                span.color-white м
-            .row.align-items-center.mb-4
-              .col-1.pr-0
-                span.h4.color-white Ш
-              .col-11.d-flex.align-items-center
-                input.form__field.form__field_bg_brand.mr-2(type="text" value="" placeholder="2,4")
-                span.color-white м
-            .row.align-items-center.mb-4
-              .col-1.pr-0
-                span.h4.color-white В
-              .col-11.d-flex.align-items-center
-                input.form__field.form__field_bg_brand.mr-2(type="text" value="" placeholder="2,5")
-                span.color-white м
-          .col-md-5.mb-3
+          .col-md-8.mb-3
             .h3.color-white.mb-3 Наружная отделка
             input.toggler(id="mainform__param_1" type="checkbox" checked)
-            label.toggler-title.toggler-title_type_checkbox.h4.mb-4(for="mainform__param_1")
+            label.toggler-title.toggler-title_type_checkbox.h4(for="mainform__param_1")
               span.toggler-icon.mr-3
                 +icon('checked')
               span.color-disabled Профлист с полимерным покрытием (цвет на выбор)
-        .mb-2
+        .mb-3
           .h3.color-white.mb-3 Внутренняя отделка
-          .row
-            .col-md-4
-              input.toggler(id="mainform__param_2" type="checkbox")
-              label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_2")
-                span.toggler-icon.mr-3
-                  +icon('checked')
-                span.color-disabled Панели МДФ (цвет на выбор)
-            .col-md-4
-              input.toggler(id="mainform__param_3" type="checkbox")
-              label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_3")
-                span.toggler-icon.mr-3
-                  +icon('checked')
-                span.color-disabled Панели ЛДСП (цвет на выбор)
-            .col-md-4
-              input.toggler(id="mainform__param_4" type="checkbox")
-              label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_4")
-                span.toggler-icon.mr-3
-                  +icon('checked')
-                span.color-disabled Панели OSB 9мм
-          .row
-            .col-md-4
-              input.toggler(id="mainform__param_5" type="checkbox")
-              label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_5")
-                span.toggler-icon.mr-3
-                  +icon('checked')
-                span.color-disabled Профлист С-8 оцинкованный, 0.4мм
-            .col-md-4
-              input.toggler(id="mainform__param_6" type="checkbox")
-              label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_6")
-                span.toggler-icon.mr-3
-                  +icon('checked')
-                span.color-disabled Профлист С-8 с полимерным покрытием, 0.4мм
-          .row
-            .col-md-4.d-flex.align-items-center.mb-3
-              .input-number.color-white.mr-3
-                button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
-                .input-number__counter 0
-                button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
-                input.d-none(type="number" value="0")
-              label.toggler-title.h4.color-disabled Входные двери (про-во Россия)
-            .col-md-8.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Дополнительное металлопластиковое окно с установкой и отделкой откосов, размер 700 х 900мм
-            .col-md-4.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Металлическая решетка на 1 окно
-            .col-md-8.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Металлические ставни на 1 окно
-          .row
-            .col-md-4
-              input.toggler(id="mainform__param_8" type="checkbox")
-              label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_8")
-                span.toggler-icon.mr-3
-                  +icon('checked')
-                span.color-disabled Линолеум
-            .col-md-8
-              input.toggler(id="mainform__param_7" type="checkbox")
-              label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_7")
-                span.toggler-icon.mr-3
-                  +icon('checked')
-                span.color-disabled Электрическая проводка (розетки, светильники, выключатель, защитные автоматы)
-          .row
-            .col-md-4.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Внутренняя перегородка с дверью МДФ
-            .col-md-8.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Внутренняя перегородка, глухая
-            .col-md-4.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Перегородка сантехническая
-            .col-md-8.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Душевой поддон с установкой, со смесителем и разводкой водопровода и канализации
-            .col-md-4.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Унитаз с установкой и разводкой водопровода и канализации
-            .col-md-8.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Раковина со смесителем с установкой и разводкой водопровода и канализации
-            .col-md-4.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Вытяжной вентилятор
-            .col-md-8.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Обогреватель 1,5 кВт
-            .col-md-4.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Сплит система 7
-            .col-md-4.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Сплит система 9
-            .col-md-4.d-flex.align-items-center.mb-3
-              label.toggler-title.h4.color-disabled Сплит система 12
-            .col-12
-              input.toggler(id="mainform__param_9" type="checkbox")
-              label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_9")
-                span.toggler-icon.mr-3
-                  +icon('checked')
-                span.color-disabled Козырек над входом
+          .form__pane.mb-2
+            .row
+              .col-md-4
+                input.toggler(id="mainform__param_2" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_2")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Панели МДФ (цвет на выбор)
+              .col-md-4
+                input.toggler(id="mainform__param_3" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_3")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Панели ЛДСП (цвет на выбор)
+              .col-md-4
+                input.toggler(id="mainform__param_4" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_4")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Панели OSB 9мм
+            .row
+              .col-md-4
+                input.toggler(id="mainform__param_5" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_5")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Профлист С-8 оцинкованный, 0.4мм
+              .col-md-4
+                input.toggler(id="mainform__param_6" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_6")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Профлист С-8 с полимерным покрытием, 0.4мм
+            .row
+              .col-md-4.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Входные двери (про-во Россия)
+              .col-md-8.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Дополнительное металлопластиковое окно с установкой и отделкой откосов, размер 700 х 900мм
+              .col-md-4.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Металлическая решетка на 1 окно
+              .col-md-8.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Металлические ставни на 1 окно
+            .row
+              .col-md-4
+                input.toggler(id="mainform__param_8" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_8")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Линолеум
+              .col-md-8
+                input.toggler(id="mainform__param_7" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_7")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Электрическая проводка (розетки, светильники, выключатель, защитные автоматы)
+            .row
+              .col-md-4.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Внутренняя перегородка с дверью МДФ
+              .col-md-8.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Внутренняя перегородка, глухая
+              .col-md-4.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Перегородка сантехническая
+              .col-md-8.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Душевой поддон с установкой, со смесителем и разводкой водопровода и канализации
+              .col-md-4.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Унитаз с установкой и разводкой водопровода и канализации
+              .col-md-8.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Раковина со смесителем с установкой и разводкой водопровода и канализации
+              .col-md-4.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Вытяжной вентилятор
+              .col-md-8.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Обогреватель 1,5 кВт
+              .col-md-4.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Сплит система 7
+              .col-md-4.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Сплит система 9
+              .col-md-4.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Сплит система 12
+              .col-12
+                input.toggler(id="mainform__param_9" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_9")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Козырек над входом
+          button.form__expander.h4.font-weight-semibold.color-white.mb-3(type="button")
+            span.form__expander-show.pointer-events-none Ещё опции
+            span.form__expander-hide.pointer-events-none Скрыть
+        .row.mb-3
+          .col-md-4.mb-3
+            .h3.color-white.mb-3 Ваше имя
+            .form__item
+              input.form__field.form__field_bg_brand(type="text" value="" placeholder="Имя Фамилия")
+          .col-md-4.mb-3
+            .h3.color-white.mb-3 Ваш телефон *
+            .form__item
+              input.form__field.form__field_bg_brand(type="text" name="mainform__phone" value="" placeholder="+7 (___) ___-__-__" required)
+              .form__error.color-white.d-none Пожалуйста, введите номер телефона
+          .col-md-4.mb-3
+            .h3.color-white.mb-3 E-mail
+            .form__item
+              input.form__field.form__field_bg_brand(type="text" value="" placeholder="example@yandex.ru")
+        .row
+          .col-md-6.offset-md-3.d-flex.flex-column.align-items-center.text-center
+            .h6.font-weight-light.color-white.mb-3 Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+              span.d-md-block &nbsp;в соответствии с нашей
+                a.tdec-underline.color-white(href="#") &nbsp;политикой конфиденциальности.
+            button.btn(type="button") Отправить запрос
 
 
   //- .section
