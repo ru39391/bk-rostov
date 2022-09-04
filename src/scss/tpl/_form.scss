@@ -82,6 +82,10 @@
   height: 80px;
   overflow: hidden;
 
+  @include media-breakpoint-only(lg) {
+    height: 90px;
+  }
+
   &.form__pane_active {
     height: 100%;
   }
