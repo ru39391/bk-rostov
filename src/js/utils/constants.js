@@ -21,6 +21,19 @@ export const quizFormConfig = {
   btnSubmitSel: '.quiz__submit'
 };
 
+export const formConfig = {
+  el: 'form',
+  uploaderSel: '.form__uploader',
+  fieldSel: '.form__field',
+  fieldActiveClass: 'form__field_active'
+};
+
+export const formUploaderConfig = {
+  inputFileMetaSel: '.form__uploader-meta',
+  inputFileMetaTitleSel: '.form__uploader-filename',
+  inputFileResetBtnSel: '.form__uploader-reset'
+};
+
 export function toggleClassName(togglerEl, {targetSel, classNameActive}) {
   const el = {
     target: togglerEl.closest(targetSel),

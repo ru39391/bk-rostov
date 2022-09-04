@@ -13,6 +13,10 @@
     @include py(32px);
   }
 
+  &.section_py_sm {
+    @include py(32px);
+  }
+
   &.section_bg_circle {
     @include before;
 

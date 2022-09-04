@@ -141,6 +141,14 @@
   }
 }
 
+@mixin h5 {
+  font-size: $font-size__defaul;
+}
+
+@mixin h6 {
+  font-size: 14px;
+}
+
 @mixin inline-block($va: top) {
   display: inline-block;
   vertical-align: $va;

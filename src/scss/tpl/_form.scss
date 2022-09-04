@@ -8,6 +8,27 @@
   border-radius: 4px;
   border: 1px solid $color__border;
   background-color: #fff;
+
+  &.form__field_type_textarea {
+    resize: none;
+    min-height: 108px;
+  }
+
+  &.form__field_bg_brand {
+    color: #fff;
+    border-color: #fff;
+    background-color: $color__brand;
+  }
+
+  &.form__field_active {
+    color: $color__default;
+    border-color: $color__light;
+    background-color: #fff;
+  }
+
+  &:focus {
+    @extend .form__field_active;
+  }
 }
 
 .form__error {
@@ -17,4 +38,38 @@
   font-size: 12px;
   text-align: left;
   color: $color__danger;
+}
+
+.form__icon {
+  @include fw(32px);
+  @include wh(32px);
+  color: #a10619;
+}
+
+.form__uploader {
+  @extend %toggler-default;
+
+  & + .form__title {
+    @extend %d-flex-ai-center;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
+
+.form__uploader-meta {
+  display: none;
+  color: lighten($color__brand,25%);
+}
+
+.form__uploader-filename {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.form__uploader-reset {
+  @extend %btn-default;
+  @extend %d-flex-ai-center;
+  color: #a10619;
 }
