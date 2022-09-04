@@ -1,0 +1,30 @@
+extends base
+
+block meta
+  - var pageClass = '';
+  - var title = 'Контакты';
+
+block wrapper
+  section.section.pt-5.pb-4
+    .wrapper
+      nav.pathway.h6.mb-2
+        a.pathway__link(href="#")
+          span.tdec-underline.color-brand Главная
+        a.pathway__link(href="#")
+          span.tdec-underline.color-brand Категория
+        span.pathway__current Позиция
+      .section__heading.section__heading_mb_sm
+        h1.section__title Многолетний опыт работы в сфере производства модульных конструкций
+      .contacts
+        .contacts__item
+          span.contacts__icon.color-brand
+            +icon('location')
+          span.contacts__title Ростов-на-Дону, ул. Красноармейская, 72
+        a.contacts__item(href="#")
+          span.contacts__icon.color-brand
+            +icon('phone')
+          span.contacts__title +7 (863) 226-01-77
+        a.contacts__item(href="#")
+          span.contacts__icon.color-brand
+            +icon('email')
+          span.contacts__title rostov-blok@yandex.ru

@@ -1,0 +1,16 @@
+extends base
+
+block meta
+  - var pageClass = '';
+  - var title = '404';
+
+block wrapper
+  .section.section_bg_disk.bg-dark.h-100
+    .wrapper.zi-2
+      .section__heading.section__heading_mb_sm.d-flex.flex-wrap.align-items-end.justify-content-between
+        .mb-3.mb-lg-0
+          .section__title.section__title_border_bottom.color-brand Страница
+          .section__title.text-uppercase.color-white не найдена
+        a.btn.bg-brand(href="#") Смотреть проекты
+      .color-lighten.font-weight-medium
+        p Такой страницы не существует. Вы можете перейти в каталог, либо вернуться на главную.
