@@ -40,6 +40,33 @@ footer.footer
         .d-flex.justify-content-center
           button.btn(type="submit") отправить
 
+#price.modal.fade
+  .modal-dialog
+    .modal-content.border-0
+      .modal-header.d-flex.align-items-center.justify-content-between
+        .h3.font-weight-bold.mr-3 Заказ контейнера
+        button.btn.btn_close.btn_unstyled.color-disabled.p-0(type="button" data-dismiss="modal")
+          +icon('close')
+      .modal-body
+        form.form(action="#" method="post")
+          .form__item.mb-3.mb-md-4
+            .h5.mb-2 Ваше имя
+            input.form__field(type="text" value="" placeholder="Имя Фамилия")
+          .form__item.mb-3.mb-md-4
+            .h5.mb-2 Ваш телефон
+              span.color-brand &nbsp;*
+            input.form__field(type="text" value="" name="phone" placeholder="+7 (___) ___-__-__" required)
+            .form__error.d-none Пожалуйста, введите номер телефона
+          .form__item.mb-3.mb-md-4
+            .h5.mb-2 Комплектация
+              span.color-brand &nbsp;*
+            input.form__field(type="text" value="" name="priceform__type" placeholder="Комплектация" required)
+            .form__error.d-none Укажите тип комплектации
+          .h6.font-weight-light.text-center.mb-4 Нажимая кнопку, вы соглашаетесь на обработку персональных данных в соответствии с нашей
+            a.tdec-underline(href="#") &nbsp;политикой конфиденциальности.
+          .d-flex.justify-content-center
+            button.btn(type="submit") отправить
+
 #callorder.modal.fade
   .modal-dialog
     .modal-content.border-0

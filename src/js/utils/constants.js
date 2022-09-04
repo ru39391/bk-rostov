@@ -24,7 +24,7 @@ export const quizFormConfig = {
 export const formConfig = {
   el: 'form',
   uploaderSel: '.form__uploader',
-  fieldSel: '.form__field',
+  fieldSel: 'input.form__field',
   fieldActiveClass: 'form__field_active',
   inputCounterSel: '.input-number'
 };

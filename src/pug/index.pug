@@ -5,7 +5,7 @@ block meta
   - var title = 'Главная';
 
 block wrapper
-  //- .promo.swiper
+  .promo.swiper
     .swiper-wrapper.mb-md-4
       .swiper-slide.h-auto.bg-dark
         .promo__picture
@@ -40,7 +40,7 @@ block wrapper
         +icon('arrow-right')
     .swiper-pagination.d-none.d-md-block
 
-  //- .section
+  .section
     .wrapper
       .section__heading
         .section__title.section__title_border_bottom.color-brand Услуги компании
@@ -80,7 +80,7 @@ block wrapper
     .wrapper
       .section__heading.section__heading_mb_sm
         .section__title.text-center.color-white Получить стоимость услуг
-      form.form(action="#" method="post")
+      form#mainform.form(action="#" method="post")
         .row.mb-lg-3
           .col-xl-4.col-lg-6.order-2.order-lg-1.mb-lg-3.mb-4
             .h3.color-white.mb-3 Опишите техническое задание
@@ -302,8 +302,7 @@ block wrapper
                 a.tdec-underline.color-white(href="#") &nbsp;политикой конфиденциальности.
             button.btn(type="button") Отправить запрос
 
-
-  //- .section
+  .section
     .wrapper
       h1.section__heading.section__heading_mb_sm.d-flex.flex-column
         span.section__title.section__title_border_bottom.color-brand Преимущества
@@ -344,7 +343,7 @@ block wrapper
       .d-flex.justify-content-center
         a.btn.bg-brand(href="#") Подробнее
 
-  //- .section.section_bg_circle.bg-dark
+  .section.section_bg_circle.bg-dark
     .wrapper.zi-2
       .section__heading.mb-2
         .section__title.section__title_border_bottom.color-brand Изготовление
@@ -373,7 +372,7 @@ block wrapper
               .feature__title 100%
               .feature__desc Не отказываемся от гарантийных случаев. Мы дорожим каждым клиентом
       .d-flex.justify-content-center
-        a.btn(href="#") Заказать услугу
+        a.btn.link-anchor(href="#mainform") Заказать услугу
 
   .section.wrapper.text-center
     .quiz
@@ -475,7 +474,7 @@ block wrapper
               .price__feature.price__feature_type_unavailable без электрики
               .price__feature.price__feature_type_plain Опционально — усиленное утепление, замена дверей/окон, отделки
             .price__footer
-              button.btn.btn_lg.bg-brand(href="#") Заказать
+              button.btn.btn_lg.bg-brand(href="#" data-toggle="modal" data-target="#price") Заказать
         .col-lg-4.mb-4.mb-lg-0
           .price
             .price__title.price__title_color_warning СТАНДАРТ
@@ -488,7 +487,7 @@ block wrapper
               .price__feature.price__feature_type_unavailable без электрики
               .price__feature.price__feature_type_plain Опционально — усиленное утепление, замена дверей/окон, отделки
             .price__footer
-              button.btn.btn_lg.bg-brand(href="#") Заказать
+              button.btn.btn_lg.bg-brand(href="#" data-toggle="modal" data-target="#price") Заказать
         .col-lg-4
           .price
             .price__title.price__title_color_brand КОМФОРТ
@@ -501,35 +500,35 @@ block wrapper
               .price__feature окно ПВХ 700х900 поворотное
               .price__feature дверь металлическая
             .price__footer
-              button.btn.btn_lg.bg-brand(href="#") Заказать
+              button.btn.btn_lg.bg-brand(href="#" data-toggle="modal" data-target="#price") Заказать
 
   .section
     .wrapper
       .section__heading
         .section__title.section__title_border_bottom.color-brand Нам доверяют
         .section__title.text-uppercase постоянные партнеры
-      .d-flex.flex-wrap
-        .mr-3.mr-md-5.mb-2
+      .partners.d-lg-flex.flex-wrap.align-items-center
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/1.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/2.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/3.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/4.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/5.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/6.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/7.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/8.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/9.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/10.png')
-        .mr-3.mr-md-5.mb-2
+        .mr-lg-3.mr-md-5.mb-2
           +img('content/logo/11.png')
 
   .section.bg-brand
@@ -585,7 +584,6 @@ block wrapper
           button.swiper-nav__item.swiper-nav__item_dir_next(type="button")
             +icon('arrow-right')
         .swiper-pagination
-
 
   .section.section_bg_disk.bg-dark
     .wrapper.zi-2
