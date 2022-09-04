@@ -22,6 +22,17 @@
     max-width: 220px;
   }
 
+  &.btn_unstyled {
+    @include wh(auto);
+    @include fw(auto);
+    background-color: rgba(0,0,0,0);
+  }
+
+  &.btn_unstyled {
+    @include wh(24px);
+    @include fw(24px);
+  }
+
   &:disabled {
     cursor: default;
     text-shadow: 0 1px 5px rgba(0,0,0,.1);
