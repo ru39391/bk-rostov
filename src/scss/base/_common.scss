@@ -28,9 +28,11 @@ ul {
   }
 }
 
+textarea,
 input {
   outline: 0;
   outline: none;
+  box-shadow: none;
 }
 
 button {

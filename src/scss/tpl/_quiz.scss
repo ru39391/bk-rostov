@@ -246,7 +246,7 @@
 
   @include media-breakpoint-up(xl) {
     @include wh(100%/12*8,22px);
-    @include pos(64px,50%);
+    @include pos(56px,50%);
     margin: 0 0 0 (-100%/12*4);
   }
 

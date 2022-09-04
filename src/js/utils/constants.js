@@ -21,6 +21,35 @@ export const quizFormConfig = {
   btnSubmitSel: '.quiz__submit'
 };
 
+export const formConfig = {
+  el: 'form',
+  uploaderSel: '.form__uploader',
+  fieldSel: '.form__field',
+  fieldActiveClass: 'form__field_active',
+  inputCounterSel: '.input-number'
+};
+
+export const formPaneConfig = {
+  el: '.form__pane',
+  elActiveClass: 'form__pane_active',
+  toggler: '.form__expander',
+  togglerActiveClass: 'form__expander_active'
+};
+
+export const formUploaderConfig = {
+  inputFileMetaSel: '.form__uploader-meta',
+  inputFileMetaTitleSel: '.form__uploader-filename',
+  inputFileResetBtnSel: '.form__uploader-reset'
+};
+
+export const inputCounterConfig = {
+  inputSel: '.input-number__field',
+  counterLabelSel: '.input-number__counter',
+  counterLabelActiveClass: 'input-number__counter_active',
+  btnAddSel: '.input-number__toggler_type_add',
+  btnRemoveSel: '.input-number__toggler_type_remove'
+}
+
 export function toggleClassName(togglerEl, {targetSel, classNameActive}) {
   const el = {
     target: togglerEl.closest(targetSel),

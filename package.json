@@ -45,8 +45,8 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "desandro-classie": "^1.0.1",
-    "formstone": "^1.4.22",
     "jquery": "^3.6.0",
+    "inputmask": "^5.0.7",
     "popper.js": "^1.16.1",
     "swiper": "^8.1.4"
   }
