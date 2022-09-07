@@ -1,0 +1,21 @@
+.blockquote {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 44px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 32px;
+  }
+}
+
+.blockquote__icon {
+  @include media-breakpoint-up(md) {
+    @include fw(44px);
+    @include wh(44px,36px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include fw(36px);
+    @include wh(36px,28px);
+  }
+}

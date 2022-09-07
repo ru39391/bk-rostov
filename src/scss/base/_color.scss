@@ -1,0 +1,43 @@
+.color-inherit {
+  @include color(inherit !important);
+}
+
+.color-brand {
+  @include color($color__brand !important);
+}
+
+.color-info {
+  @include color($color__info !important);
+}
+
+.color-success {
+  @include color($color__success !important);
+}
+
+.color-warning {
+  @include color($color__warning !important);
+}
+
+.color-danger {
+  @include color($color__danger !important);
+}
+
+.color-white {
+  @include color(#fff !important);
+}
+
+.color-light {
+  @include color($color__light !important);
+}
+
+.color-lighten {
+  @include color($color__lighten !important);
+}
+
+.color-disabled {
+  @include color($color__disabled !important);
+}
+
+.color-dark {
+  @include color($color__dark !important);
+}

@@ -1,5 +1,619 @@
 extends base
 
 block meta
-  - var pageClass = 'main-page';
+  - var pageClass = '';
   - var title = 'Главная';
+
+block wrapper
+  .promo.swiper
+    .swiper-wrapper.mb-md-4
+      .swiper-slide.h-auto.bg-dark
+        .promo__picture
+          +img('content/gostiniczyi-iz-vagonchikov-001.jpg','img-cover')
+        .promo__wrapper
+          .wrapper.d-flex.h-100.px-0
+            .col-xl-8.col-lg-9.col-md-11.d-flex.flex-column.justify-content-center
+              .promo__title Модульные двухэтажные АБК жилые
+              .promo__price Цена
+                .promo__price-value от 9 500 руб/м
+              ul.promo__list
+                li.promo__list-item изготовление, монтаж и сборка кровли от 10 рабочих дней
+                li.promo__list-item выполнение под ключ или "шеф монтаж"
+              a.btn.bg-brand(href="#") Подробнее
+      .swiper-slide.h-auto.bg-dark
+        .promo__picture
+          +img('content/gostiniczyi-iz-vagonchikov-001.jpg','img-cover')
+        .promo__wrapper
+          .wrapper.d-flex.h-100.px-0
+            .col-xl-8.col-lg-9.col-md-11.d-flex.flex-column.justify-content-center
+              .promo__title Модульные двухэтажные АБК жилые, офисные, штабы строительства
+              .promo__price Цена
+                .promo__price-value от 9 500 руб/м
+              ul.promo__list
+                li.promo__list-item изготовление, монтаж и сборка кровли от 10 рабочих дней
+                li.promo__list-item выполнение под ключ или "шеф монтаж"
+              a.btn.bg-brand(href="#") Подробнее
+    .swiper-nav.d-none.d-md-block
+      button.swiper-nav__item.swiper-nav__item_dir_prev.color-light.ml-3(type="button")
+        +icon('arrow-left')
+      button.swiper-nav__item.swiper-nav__item_dir_next.color-light.mr-3(type="button")
+        +icon('arrow-right')
+    .swiper-pagination.d-none.d-md-block
+
+  .section
+    .wrapper
+      .section__heading
+        .section__title.section__title_border_bottom.color-brand Услуги компании
+        .section__title.text-uppercase изготовление и монтаж под ключ
+      ul.section__list.row
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Модульные здания
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Блок-контейнеры
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Проекты из сендвич-панелей
+        li.col-md-6.d-flex
+          a.section__list-item(href="#")
+            +icon('checked-filled', 'section__list-icon color-success mr-3')
+            span.font-weight-bold Контрольно-пропускные пункты
+      .gallery-grid.row
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+        .col-md-6
+          a.gallery-grid__item(href="#")
+            +img('content/bk.jpg', 'img-cover')
+
+  .section.section_py_sm.bg-brand
+    .wrapper
+      .section__heading.section__heading_mb_sm
+        .section__title.text-center.color-white Получить стоимость услуг
+      form#mainform.form(action="#" method="post")
+        .row.mb-lg-3
+          .col-xl-4.col-lg-6.order-2.order-lg-1.mb-lg-3.mb-4
+            .h3.color-white.mb-3 Опишите техническое задание
+            textarea.form__field.form__field_type_textarea.form__field_bg_brand
+          .col-xl-8.col-lg-6.order-1.order-lg-2.mb-lg-3.mb-4
+            .h3.color-white.mb-3 Размер блок-контейнера
+            .row
+              .col-xl-4.col-lg-12.col-md-4.d-flex.align-items-center.mb-xl-0.mb-2
+                input.form__field.form__field_bg_brand.mr-2(type="text" value="" placeholder="Длина")
+                span.color-white м
+              .col-xl-4.col-lg-12.col-md-4.d-flex.align-items-center.mb-xl-0.mb-2
+                input.form__field.form__field_bg_brand.mr-2(type="text" value="" placeholder="Ширина")
+                span.color-white м
+              .col-xl-4.col-lg-12.col-md-4.d-flex.align-items-center
+                input.form__field.form__field_bg_brand.mr-2(type="text" value="" placeholder="Высота")
+                span.color-white м
+        .row.mb-lg-3
+          .col-xl-4.col-lg-6.mb-lg-3.mb-4
+            .h3.color-white.mb-3 Или загрузите файл
+            input(class="form__uploader" type="file" id="mainform__file" name="mainform__file" accept=".pdf,.doc,.docx,.xls,.xlsx")
+            label.form__title.color-white(for="mainform__file")
+              +icon('paper-clip','form__icon mr-2')
+              | Прикрепить файл
+            .form__uploader-meta.pt-3
+              .form__uploader-title.mb-2 Прикреплённые файлы:
+              .form__uploader-filename.color-white.mb-2
+              button.form__uploader-reset(type="button")
+                span.h3.mr-2 &times;
+                | Удалить
+          .col-xl-8.col-lg-6.mb-lg-3.mb-4
+            .h3.color-white.mb-3 Наружная отделка
+            input.toggler(id="mainform__param_1" type="checkbox" checked)
+            label.toggler-title.toggler-title_type_checkbox.h4(for="mainform__param_1")
+              span.toggler-icon.mr-3
+                +icon('checked')
+              span.color-disabled Профлист с полимерным покрытием (цвет на выбор)
+        .mb-lg-3.mb-4
+          .h3.color-white.mb-3 Внутренняя отделка
+          .form__pane.mb-2
+            .row.align-items-center
+              .col-xl-4.col-lg-6
+                input.toggler(id="mainform__param_2" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_2")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Панели МДФ (цвет на выбор)
+              .col-xl-4.col-lg-3
+                input.toggler(id="mainform__param_3" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_3")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Панели ЛДСП (цвет на выбор)
+              .col-xl-4.col-lg-3
+                input.toggler(id="mainform__param_4" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_4")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Панели OSB 9мм
+            .row.align-items-center
+              .col-xl-4.col-lg-6
+                input.toggler(id="mainform__param_5" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_5")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Профлист С-8 оцинкованный, 0.4мм
+              .col-xl-8.col-lg-6
+                input.toggler(id="mainform__param_6" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_6")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Профлист С-8 с полимерным покрытием, 0.4мм
+            .row.align-items-center
+              .col-xl-4.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Входные двери (про-во Россия)
+              .col-xl-8.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Дополнительное металлопластиковое окно с установкой и отделкой откосов, размер 700 х 900мм
+              .col-xl-4.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Металлическая решетка на 1 окно
+              .col-xl-8.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Металлические ставни на 1 окно
+            .row.align-items-center
+              .col-xl-4.col-lg-6
+                input.toggler(id="mainform__param_8" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_8")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Линолеум
+              .col-xl-8.col-lg-6
+                input.toggler(id="mainform__param_7" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_7")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Электрическая проводка (розетки, светильники, выключатель, защитные автоматы)
+            .row.align-items-center
+              .col-xl-4.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Внутренняя перегородка с дверью МДФ
+              .col-xl-8.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Внутренняя перегородка, глухая
+              .col-xl-4.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Перегородка сантехническая
+              .col-xl-8.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Душевой поддон с установкой, со смесителем и разводкой водопровода и канализации
+              .col-xl-4.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Унитаз с установкой и разводкой водопровода и канализации
+              .col-xl-8.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Раковина со смесителем с установкой и разводкой водопровода и канализации
+              .col-xl-4.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Вытяжной вентилятор
+              .col-xl-8.col-lg-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Обогреватель 1,5 кВт
+              .col-lg-4.col-md-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Сплит система 7
+              .col-lg-4.col-md-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Сплит система 9
+              .col-lg-4.col-md-6.d-flex.align-items-center.mb-3
+                .input-number.color-white.mr-3
+                  button.input-number__toggler.input-number__toggler_type_remove.color-brand.bg-white.border-0(type="button" disabled) -
+                  .input-number__counter 0
+                  button.input-number__toggler.input-number__toggler_type_add.color-brand.bg-white.border-0(type="button") +
+                  input.input-number__field(type="number" value="0")
+                label.toggler-title.h4.color-disabled Сплит система 12
+              .col-12
+                input.toggler(id="mainform__param_9" type="checkbox")
+                label.toggler-title.toggler-title_type_checkbox.h4.mb-3(for="mainform__param_9")
+                  span.toggler-icon.mr-3
+                    +icon('checked')
+                  span.color-disabled Козырек над входом
+          button.form__expander.h4.font-weight-semibold.color-white(type="button")
+            span.form__expander-show.pointer-events-none Ещё опции
+            span.form__expander-hide.pointer-events-none Скрыть
+        .row.mb-lg-3
+          .col-md-4.mb-3
+            .h3.color-white.mb-2.mb-md-3 Ваше имя
+            .form__item
+              input.form__field.form__field_bg_brand(type="text" value="" placeholder="Имя Фамилия")
+          .col-md-4.mb-3
+            .h3.color-white.mb-2.mb-md-3 Ваш телефон *
+            .form__item
+              input.form__field.form__field_bg_brand(type="text" name="mainform__phone" value="" placeholder="+7 (___) ___-__-__" required)
+              .form__error.color-white.d-none Пожалуйста, введите номер телефона
+          .col-md-4.mb-3
+            .h3.color-white.mb-2.mb-md-3 E-mail
+            .form__item
+              input.form__field.form__field_bg_brand(type="text" value="" placeholder="example@yandex.ru")
+        .row
+          .col-xl-6.offset-xl-3.col-md-10.offset-md-1.d-flex.flex-column.align-items-center.text-center
+            .h6.font-weight-light.color-white.mb-3 Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+              span.d-md-block &nbsp;в соответствии с нашей
+                a.tdec-underline.color-white(href="#") &nbsp;политикой конфиденциальности.
+            button.btn(type="button") Отправить запрос
+
+  .section
+    .wrapper
+      h1.section__heading.section__heading_mb_sm.d-flex.flex-column
+        span.section__title.section__title_border_bottom.color-brand Преимущества
+        span.section__title.text-uppercase нашей продукции
+      .content
+        p Мы являемся производителями. Многолетний опыт работы в сфере производства модульных конструкций позволяет нам выпускать высококачественную продукцию.
+        p Изготовление происходит под строгим контролем, каждый наш вагончик получает свой индивидуальный паспорт и номер. Это дает возможность отслеживать всю цепочку его изготовления, знать всех непосредственных исполнителей.
+        p Есть некоторые технологические особенности, которые позволяют нашим бытовкам оставаться конкурентоспособными:
+        .list-counter.row
+          .content__section.col-xl-5.col-md-6
+            .content__section-heading
+              .content__section-picture
+                +img('content/bk.jpg','img-cover')
+            .content__section-desc
+              h4 Металлические двери российского производства
+              p Мы отказались от использования дверей из Китая, так как двери от наших поставщиков гораздо надежнее
+          .content__section.col-xl-5.offset-xl-1.col-md-6
+            .content__section-heading
+              .content__section-picture
+                +img('content/bk.jpg','img-cover')
+            .content__section-desc
+              h4 Металлические двери российского производства
+              p Мы отказались от использования дверей из Китая, так как двери от наших поставщиков гораздо надежнее
+          .content__section.col-xl-5.col-md-6
+            .content__section-heading
+              .content__section-picture
+                +img('content/bk.jpg','img-cover')
+            .content__section-desc
+              h4 Металлические двери российского производства
+              p Мы отказались от использования дверей из Китая, так как двери от наших поставщиков гораздо надежнее
+          .content__section.col-xl-5.offset-xl-1.col-md-6
+            .content__section-heading
+              .content__section-picture
+                +img('content/bk.jpg','img-cover')
+            .content__section-desc
+              h4 Металлические двери российского производства
+              p Мы отказались от использования дверей из Китая, так как двери от наших поставщиков гораздо надежнее
+      .d-flex.justify-content-center
+        a.btn.bg-brand(href="#") Подробнее
+
+  .section.section_bg_circle.bg-dark
+    .wrapper.zi-2
+      .section__heading.mb-2
+        .section__title.section__title_border_bottom.color-brand Изготовление
+        .section__title.text-uppercase.color-white Наше производство
+      .blockquote.color-lighten.font-weight-medium
+        .d-flex.justify-content-end.mb-3.mb-sm-4
+          +icon('quote','blockquote__icon color-brand')
+        p Блок-контейнеры от производителя – продукт востребованный многими предприятиями, строительными компаниями и частными потребителями в . Потребность в блок-контейнерах нашего производства обусловлена высоким качеством выпускаемых модулей, их разнообразием и конкурентоспособной ценой.
+      .row
+        .col-md-4
+          .feature.color-white
+            +icon('plan','feature__icon color-brand')
+            .feature__wrapper
+              .feature__title 4500 кв.
+              .feature__desc Производственные площади, подтвержденные документально
+        .col-md-4
+          .feature.color-white
+            +icon('calendar','feature__icon color-brand')
+            .feature__wrapper
+              .feature__title 9 лет
+              .feature__desc Работаем на рынке с 2012 года. Всегда соблюдаем заявленные сроки
+        .col-md-4
+          .feature.color-white
+            +icon('engine','feature__icon color-brand')
+            .feature__wrapper
+              .feature__title 100%
+              .feature__desc Не отказываемся от гарантийных случаев. Мы дорожим каждым клиентом
+      .d-flex.justify-content-center
+        a.btn.link-anchor(href="#mainform") Заказать услугу
+
+  .section.wrapper.text-center
+    .quiz
+      +img('content/gostiniczyi-iz-vagonchikov-001.jpg','quiz__bg')
+      form.quiz__wrapper(action="#" method="post")
+        .quiz__pane.quiz__pane_active
+          .quiz__title Пройдите тест и получите
+            span.d-block &nbsp;скидку на покупку блок-контейнера!
+          .quiz__desc Исходя из ваших ответов система подберет вам лучшие варианты бытовок,
+            span.d-lg-block а также сформирует для вас спецпредложение на индивидуальных условиях!
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button") Начать
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Вы являетесь физическим или юридическим лицом?
+          .quiz__desc.d-flex.flex-column.align-items-start
+            input.toggler(type="radio" name="pane__1" id="pane__1_1")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__1_1") Физическое лицо
+            input.toggler(type="radio" name="pane__1" id="pane__1_2")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__1_2") Юридическое лицо
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button" disabled) Далее
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Заказывали ли Вы нашу продукцию или делаете это впервые?
+          .quiz__desc.d-flex.flex-column.align-items-start
+            input.toggler(type="radio" name="pane__2" id="pane__2_1")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__2_1") Да, заказывал
+            input.toggler(type="radio" name="pane__2" id="pane__2_2")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__2_2") Заказываю впервые
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button" disabled) Далее
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Как Вы планируете забирать заказ, силами нашего автотранспорта или самовывозом?
+          .quiz__desc.d-flex.flex-column.align-items-start
+            input.toggler(type="radio" name="pane__3" id="pane__3_1")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__3_1") Транспорт поставщика
+            input.toggler(type="radio" name="pane__3" id="pane__3_2")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__3_2") Самовывоз
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button" disabled) Далее
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Хотели бы Вы рассмотреть сотрудничество на постоянной основе как ДИЛЕР нашей компании?
+          .quiz__desc.d-flex.flex-column.align-items-start
+            input.toggler(type="radio" name="pane__4" id="pane__4_1")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__4_1") Да, хочу
+            input.toggler(type="radio" name="pane__4" id="pane__4_2")
+            label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__4_2") Нет, не интересует
+          .quiz__footer.d-flex.justify-content-center.w-100
+            button.quiz__next.btn.btn_sm.bg-brand(type="button" disabled) Далее
+        .quiz__pane.quiz__pane_bg_white
+          .quiz__subtitle Укажите телефон и выберите способ связи
+          .quiz__desc.d-flex
+            .form
+              .form__item
+                input.form__field(type="text" value="" name="phone" placeholder="+7 (___) ___-__-__" required)
+                .form__error.d-none Пожалуйста, введите номер телефона
+          .quiz__desc.d-flex.flex-column.align-items-start.mb-lg-2
+            .row
+              .col-sm-6.d-flex.flex-column.align-items-start
+                input.toggler(type="radio" name="pane__5" id="pane__5_1")
+                label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_1") Звонок
+                input.toggler(type="radio" name="pane__5" id="pane__5_2")
+                label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_2") SMS
+              .col-sm-6.d-flex.flex-column.align-items-start
+                input.toggler(type="radio" name="pane__5" id="pane__5_3")
+                label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_3") WhatsApp
+                input.toggler(type="radio" name="pane__5" id="pane__5_4")
+                label.toggler-title.toggler-title_type_radio.h3.font-weight-light.mb-3(for="pane__5_4") Telegram
+          .quiz__footer.d-flex.flex-column.align-items-center.w-100
+            .h6.font-weight-light.mb-3 Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+              span.d-md-block &nbsp;в соответствии с нашей
+                a.tdec-underline(href="#") &nbsp;политикой конфиденциальности.
+            button.quiz__submit.btn.btn_sm.bg-brand(type="submit" disabled) Отправить
+      .quiz__nav
+        button.quiz__prev(type="button")
+          +icon('arrow')
+        .quiz__progress
+          .quiz__progress-runner
+      .quiz__pagination
+        span.quiz__pagination-current 01
+        span.quiz__pagination-total &nbsp;/ 05
+
+  .section.bg-light
+    .wrapper
+      .section__heading
+        .section__title.text-uppercase.text-center Цены на продукцию
+      .row
+        .col-lg-4.mb-4.mb-lg-0
+          .price
+            .price__title.price__title_color_info ЭКОНОМ
+            .flex-grow-1.zi-2.mb-4
+              .price__desc от
+                span.price__value &nbsp;65 000₽
+              .price__feature пол ДСП 16 мм
+              .price__feature стены - ДВП
+              .price__feature потолок - ДВП
+              .price__feature окно ПВХ 700х900 поворотное
+              .price__feature дверь металлическая
+              .price__feature производство КНР
+              .price__feature.price__feature_type_unavailable без электрики
+              .price__feature.price__feature_type_plain Опционально — усиленное утепление, замена дверей/окон, отделки
+            .price__footer
+              button.btn.btn_lg.bg-brand(href="#" data-toggle="modal" data-target="#price") Заказать
+        .col-lg-4.mb-4.mb-lg-0
+          .price
+            .price__title.price__title_color_warning СТАНДАРТ
+            .flex-grow-1.zi-2.mb-4
+              .price__desc от
+                span.price__value &nbsp;85 000₽
+              .price__feature пол ДСП 16 мм
+              .price__feature стены - ДВП
+              .price__feature производство КНР
+              .price__feature.price__feature_type_unavailable без электрики
+              .price__feature.price__feature_type_plain Опционально — усиленное утепление, замена дверей/окон, отделки
+            .price__footer
+              button.btn.btn_lg.bg-brand(href="#" data-toggle="modal" data-target="#price") Заказать
+        .col-lg-4
+          .price
+            .price__title.price__title_color_brand КОМФОРТ
+            .flex-grow-1.zi-2.mb-4
+              .price__desc от
+                span.price__value &nbsp;94 000₽
+              .price__feature пол ДСП 16 мм
+              .price__feature стены - ДВП
+              .price__feature потолок - ДВП
+              .price__feature окно ПВХ 700х900 поворотное
+              .price__feature дверь металлическая
+            .price__footer
+              button.btn.btn_lg.bg-brand(href="#" data-toggle="modal" data-target="#price") Заказать
+
+  .section
+    .wrapper
+      .section__heading
+        .section__title.section__title_border_bottom.color-brand Нам доверяют
+        .section__title.text-uppercase постоянные партнеры
+      .partners.d-lg-flex.flex-wrap.align-items-center
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/1.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/2.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/3.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/4.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/5.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/6.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/7.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/8.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/9.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/10.png')
+        .mr-lg-3.mr-md-5.mb-2
+          +img('content/logo/11.png')
+
+  .section.bg-brand
+    .wrapper
+      .section__heading.section__heading_mb_sm
+        .section__title.text-uppercase.text-center.color-white Отзывы
+      .reviews
+        .reviews__slides.swiper
+          .swiper-wrapper.mb-4
+            .swiper-slide
+              .reviews__item
+                .d-flex.align-items-center.justify-content-between.mb-2
+                  .reviews__title.mr-sm-4 Офисный вагончик
+                  +icon('quote','reviews__icon color-brand d-none d-sm-block')
+                .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
+                button.reviews__readmore(type="button")
+                  span.reviews__readmore-show Читать полностью
+                  span.reviews__readmore-hide Скрыть
+                .reviews__date 16.09.2021 г.
+            .swiper-slide
+              .reviews__item
+                .d-flex.align-items-center.justify-content-between.mb-2
+                  .reviews__title.mr-sm-4 Офисный вагончик
+                  +icon('quote','reviews__icon color-brand d-none d-sm-block')
+                .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
+                button.reviews__readmore(type="button")
+                  span.reviews__readmore-show Читать полностью
+                  span.reviews__readmore-hide Скрыть
+                .reviews__date 16.09.2021 г.
+            .swiper-slide
+              .reviews__item
+                .d-flex.align-items-center.justify-content-between.mb-2
+                  .reviews__title.mr-sm-4 Офисный вагончик
+                  +icon('quote','reviews__icon color-brand d-none d-sm-block')
+                .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
+                button.reviews__readmore(type="button")
+                  span.reviews__readmore-show Читать полностью
+                  span.reviews__readmore-hide Скрыть
+                .reviews__date 16.09.2021 г.
+            .swiper-slide
+              .reviews__item
+                .d-flex.align-items-center.justify-content-between.mb-2
+                  .reviews__title.mr-sm-4 Офисный вагончик
+                  +icon('quote','reviews__icon color-brand d-none d-sm-block')
+                .reviews__desc Дёшево и быстро построили офисы для персонала в арт пространстве на стройке. Временный лагерь архитекторов, приглашенных для работы над проектом комплекса отелей, сделали визуально необычным и стильным. Простые "вагончики" - контейнеры в удачном цвете уникально преобразили площадку. Самым большим одобрением стало одобрение этого решения бригадой профессионалов.
+                button.reviews__readmore(type="button")
+                  span.reviews__readmore-show Читать полностью
+                  span.reviews__readmore-hide Скрыть
+                .reviews__date 16.09.2021 г.
+        .swiper-nav
+          button.swiper-nav__item.swiper-nav__item_dir_prev(type="button")
+            +icon('arrow-left')
+          button.swiper-nav__item.swiper-nav__item_dir_next(type="button")
+            +icon('arrow-right')
+        .swiper-pagination
+
+  .section.section_bg_disk.bg-dark
+    .wrapper.zi-2
+      .section__heading.section__heading_mb_sm.d-flex.flex-wrap.align-items-end.justify-content-between
+        .mb-3.mb-lg-0
+          .section__title.section__title_border_bottom.color-brand Выполненные проекты
+          .section__title.text-uppercase.color-white фото завершённых объектов
+        a.btn.bg-brand(href="#") Все проекты
+      .row
+        .col-md-4.mb-4.mb-md-0
+          a.project(href="#")
+            +img('content/bk.jpg','img-cover')
+            span.project__wrapper
+              span.project__title Блок-контейнер для торговли
+              span.project__date
+                +icon('calendar','project__icon color-light mr-2')
+                | 20.06.2020 г.
+        .col-md-4.mb-4.mb-md-0
+          a.project(href="#")
+            +img('content/bk.jpg','img-cover')
+            span.project__wrapper
+              span.project__title Блок-контейнер для торговли
+              span.project__date
+                +icon('calendar','project__icon color-light mr-2')
+                | 20.06.2020 г.
+        .col-md-4
+          a.project(href="#")
+            +img('content/bk.jpg','img-cover')
+            span.project__wrapper
+              span.project__title Блок-контейнер для торговли
+              span.project__date
+                +icon('calendar','project__icon color-light mr-2')
+                | 20.06.2020 г.

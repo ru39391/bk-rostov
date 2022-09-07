@@ -1,0 +1,314 @@
+.quiz {
+  @include before;
+  overflow: hidden;
+  transition: all .3s ease;
+
+  @include media-breakpoint-up(lg) {
+    @include inline-block;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:before {
+    transition: all .3s ease;
+
+    @include media-breakpoint-down(md) {
+      @include wh(100%);
+      @include pos(0,0);
+      z-index: 2;
+      background-color: rgba(0,0,0,.72);
+    }
+  }
+
+  &.quiz_active {
+    border-radius: 8px;
+    box-shadow: 0 0 40px 0 rgba(0,0,0,.2);
+
+    &:before {
+      @include media-breakpoint-down(md) {
+        background-color: #fff;
+      }
+    }
+
+    .quiz__progress {
+      opacity: 1;
+      transition: all .3s ease .3s;
+    }
+
+    .quiz__prev {
+      opacity: 1;
+      pointer-events: all;
+      transition: all .3s ease .3s;
+    }
+
+    .quiz__pagination {
+      opacity: 1;
+      transition: all .3s ease .3s;
+    }
+  }
+}
+
+.quiz__bg {
+  @include media-breakpoint-up(lg) {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include wh(100%);
+    @include pos(0,0);
+    z-index: 1;
+    object-fit: cover;
+  }
+}
+
+.quiz__wrapper {
+  display: flex;
+  color: #fff;
+  transition: all .3s ease;
+
+  @include media-breakpoint-up(lg) {
+    @include wh(100%);
+    @include pos(0,0);
+    background-color: rgba(0,0,0,.72);
+  }
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    z-index: 3;
+    order: 2;
+  }
+}
+
+.quiz__pane {
+  @extend %d-flex-column;
+  @extend %d-flex-centered;
+  @include fw(100%);
+  overflow: hidden;
+  transition: all .3s ease;
+
+  @include media-breakpoint-up(lg) {
+    padding: 32px 24px;
+  }
+
+  @include media-breakpoint-between(sm,md) {
+    padding: 16px 24px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    padding: 16px;
+  }
+
+  &.quiz__pane_bg_white {
+    color: $color__default;
+
+    @include media-breakpoint-up(lg) {
+      background-color: #fff;
+    }
+  }
+
+  &.quiz__pane_active {
+    .quiz__subtitle {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .quiz__desc {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .quiz__footer {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.quiz__title {
+  @include h1;
+  text-transform: uppercase;
+  line-height: $line-height__content;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 36px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 28px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    font-size: 24px;
+  }
+}
+
+.quiz__subtitle {
+  @include h2;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity .3s ease .3s,  transform .4s ease .2s;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 24px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 18px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    font-size: 22px;
+  }
+}
+
+.quiz__desc {
+  @include h4;
+  font-weight: 500;
+  line-height: $line-height__content;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity .6s ease .5s,  transform .4s ease .4s;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 32px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.quiz__footer {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity .9s ease .7s,  transform .4s ease .6s;
+}
+
+.quiz__nav {
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    align-items: center;
+  }
+
+  @include media-breakpoint-only(lg) {
+    @include pos(24px,24px);
+    right: 24px;
+  }
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    z-index: 3;
+    order: 1;
+  }
+
+  @include media-breakpoint-between(sm,md) {
+    padding: 24px 24px 0;
+  }
+
+  @include media-breakpoint-only(xs) {
+    padding: 24px 16px 0;
+  }
+}
+
+.quiz__prev {
+  @extend %btn-default;
+  @include wh(32px);
+  color: $color__brand;
+  opacity: 0;
+  pointer-events: none;
+
+  @include media-breakpoint-up(xl) {
+    @include pos(24px,24px);
+  }
+
+  @include media-breakpoint-between(sm,lg) {
+    margin: 0 32px 0 0;
+  }
+
+  @include media-breakpoint-only(xs) {
+    margin: 0 24px 0 0;
+  }
+}
+
+.quiz__progress {
+  display: flex;
+  overflow: hidden;
+  opacity: 0;
+  border-radius: 16px;
+  pointer-events: none;
+  background-color: $color__light;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.05) inset;
+
+  @include media-breakpoint-up(xl) {
+    @include wh(100%/12*8,22px);
+    @include pos(56px,50%);
+    margin: 0 0 0 (-100%/12*4);
+  }
+
+  @include media-breakpoint-down(lg) {
+    flex-grow: 1;
+  }
+}
+
+.quiz__progress-runner {
+  @extend %d-flex-column;
+  @extend %d-flex-centered;
+  @include fs-lh(12px,$line-height__content);
+  width: 0;
+  color: #fff;
+  overflow: hidden;
+  transition: all .8s ease .3s;
+  background-color: $color__brand;
+
+  @include media-breakpoint-down(lg) {
+    @include py(2px);
+  }
+}
+
+.quiz__pagination {
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  color: $color__light;
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  @include media-breakpoint-down(md) {
+    text-align: right;
+    position: relative;
+    z-index: 3;
+    order: 3;
+  }
+
+  @include media-breakpoint-up(sm) {
+    @include fs-lh(72px,1);
+  }
+
+  @include media-breakpoint-between(sm,md) {
+    padding: 0 24px 24px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    @include fs-lh(56px,1);
+    padding: 0 16px 24px;
+  }
+}
+
+.quiz__pagination-current {
+  @include media-breakpoint-up(sm) {
+    font-size: 104px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    font-size: 72px;
+  }
+}

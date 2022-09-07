@@ -1,0 +1,53 @@
+.tdec-none {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+      text-decoration: none;
+  }
+}
+
+.tdec-underline {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+      text-decoration: underline;
+  }
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.h1 {
+  @include h1;
+}
+
+.h2 {
+  @include h2;
+}
+
+.h3 {
+  @include h3;
+}
+
+.h4 {
+  @include h4;
+}
+
+.h5 {
+  @include h5;
+}
+
+.h6 {
+  @include h6;
+}

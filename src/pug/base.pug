@@ -16,18 +16,15 @@ html(lang="ru")
 
     //- link(href="../img/favicon.ico" rel="shortcut icon")
 
-  body(class=pageClass)    
+  body.page
     block header
-      include base/header.pug
+      include base/header
 
-    block wrapper
-      section.wrapper
-        h1 #{title}
-        +icon('terminal-fill')
+    .zi-1.flex-grow-1
+      block wrapper
 
     block footer
-      include base/footer.pug
+      include base/footer
 
     script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")
-    script(src="https://unpkg.com/swiper@5.4.1/js/swiper.min.js")

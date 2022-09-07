@@ -1,0 +1,45 @@
+.toggler {
+  @extend %toggler-default;
+
+  &:checked {
+    & + .toggler-title {
+      .toggler-icon {
+        color: $color__brand;
+      }
+
+      &:before {
+        background-color: $color__brand;
+      }
+    }
+  }
+}
+
+.toggler-title {
+  @extend %d-flex-ai-center;
+  @include before;
+  cursor: pointer;
+  margin-bottom: 0;
+
+  &.toggler-title_type_radio {
+    &:before {
+      @include wh(24px);
+      @include fw(24px);
+      position: static;
+      margin: 0 16px 0 0;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      background-color: $color__disabled;
+      box-shadow: 0 0 0 1px $color__disabled;
+    }
+  }
+}
+
+.toggler-icon {
+  @include wh(24px);
+  @include fw(24px);
+  margin: 0 16px 0 0;
+  border-radius: 4px;
+  color: $color__disabled;
+  background-color: #fff;
+  border: 1px solid $color__disabled;
+}

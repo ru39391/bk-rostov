@@ -1,4 +1,4 @@
-$font-family__default: 'Artegra Sans', Arial, sans-serif;
+$font-family__default: 'Montserrat', Arial, sans-serif;
 $font-family__extended: $font-family__default;
 $font-family__title: $font-family__default;
 $font-family__alter: $font-family__default;
@@ -7,9 +7,19 @@ $font-size__default: 16px;
 $line-height__default: 1;
 $line-height__content: 1.4;
 
-$color__default: #000;
+$color__default: #131313;
+$color__brand: #e80824;
+$color__dark: #252525;
+$color__white: #fff;
+$color__light: #f3f2f2;
+$color__lighten: #b0afaf;
+$color__disabled: #dfdddd;
 
 $color__link: $color__default;
 $color__link_hover: $color__default;
 
-$color__border: $color__default;
+$color__info: #0f62e0;
+$color__danger: $color__brand;
+$color__success: #14cd8a;
+$color__warning: #fd9105;
+$color__border: #eaeaea;

@@ -1,0 +1,139 @@
+.section {
+  overflow: hidden;
+
+  @include media-breakpoint-up(xl) {
+    @include py(60px);
+  }
+
+  @include media-breakpoint-between(md,lg) {
+    @include py(40px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include py(32px);
+  }
+
+  &.section_py_sm {
+    @include py(32px);
+  }
+
+  &.section_bg_circle {
+    @include before;
+
+    &:before {
+      z-index: 1;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,.1);
+
+      @include media-breakpoint-up(xl) {
+        @include wh(660px);
+        @include pos(-220px,-110px);
+      }
+
+      @include media-breakpoint-between(md,lg) {
+        @include wh(440px);
+        @include pos(-145px,-70px);
+      }
+
+      @include media-breakpoint-down(sm) {
+        @include wh(330px);
+        @include pos(-110px,-55px);
+      }
+    }
+  }
+
+  &.section_bg_disk {
+    @extend .section_bg_circle;
+
+    &:before {
+      top: auto;
+      bottom: -50%;
+      border: 110px solid rgba(255,255,255,.1);
+      background-color: rgba(0,0,0,0);
+
+      @include media-breakpoint-up(xl) {
+        left: 88px;
+      }
+
+      @include media-breakpoint-between(md,lg) {
+        left: 64px;
+        border-width: 88px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        left: 48px;
+        border-width: 64px;
+      }
+    }
+  }
+}
+
+.section__heading {
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 65px;
+  }
+
+  @include media-breakpoint-between(md,lg) {
+    margin-bottom: 48px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 36px;
+  }
+
+  &.section__heading_mb_sm {
+    margin-bottom: 36px;
+  }
+}
+
+.section__title {
+  @include h1;
+
+  &.section__title_border_bottom {
+    @include before;
+    @include offset(0 0 12px,0 0 12px);
+
+    &:before {
+      @include wh(120px,4px);
+      bottom: 0;
+      left: -80px;
+      background-color: $color__brand;
+    }
+  }
+}
+
+.section__list {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 32px;
+  }
+}
+
+.section__list-item {
+  @extend %d-flex-ai-center;
+  @include h3;
+  line-height: $line-height__content;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 0 20px
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 0 16px
+  }
+}
+
+.section__list-icon {
+  @include media-breakpoint-up(md) {
+    @include fw(30px);
+    @include wh(30px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include fw(24px);
+    @include wh(24px);
+  }
+}

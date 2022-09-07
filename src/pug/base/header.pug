@@ -1,1 +1,53 @@
 header.header
+  .wrapper.d-flex.flex-column.flex-md-row.flex-md-wrap.align-items-center.justify-content-center
+    .logo.flex-grow-1.mb-3.mb-md-0
+      a.logo__icon.mr-2.mr-md-4(href="/")
+        +img('logo.png')
+      a.d-flex.flex-column(href="/")
+        span.logo__title.logo__title_fs_lg.font-weight-bold.text-nowrap.color-brand Блок-контейнеры
+        span.logo__title от производителя
+    .contacts.col-xl-6.col-lg-7.col.d-flex.flex-wrap.align-items-center.justify-content-sm-between.px-0
+      a.contacts__item.mb-2.mb-lg-0.mr-3.mr-sm-0(href="#")
+        span.contacts__icon.mr-2
+          +icon('whatsapp')
+        span.contacts__subtitle.d-none.d-sm-block Связаться с нами
+          span.d-lg-block &nbsp;в WhatsApp
+      a.contacts__item.mb-2.mb-lg-0(href="#")
+        span.contacts__icon.color-brand.mr-2
+          +icon('phone-filled')
+        span.d-flex.flex-column
+          span.contacts__title.contacts__title_fs_sm.font-weight-bold.text-nowrap.mb-1 +7 (863) 226-01-77
+          span.contacts__subtitle.d-flex.flex-column.d-sm-block
+            span.text-nowrap Ростов-на-Дону,
+            span.text-nowrap ул. Красноармейская, 72
+nav.nav
+  button.nav__toggler(type="button")
+    span.nav__toggler-icon.nav__toggler-icon_type_show.mr-3
+      +icon('menu')
+    span.nav__toggler-icon.nav__toggler-icon_type_hide.mr-3
+      +icon('close')
+    span.nav__toggler-title
+      span.nav__toggler-show Показать
+      span.nav__toggler-hide Скрыть
+      | &nbsp;меню
+  .wrapper.pos-rel
+    ul.nav__menu
+      li.nav__item
+        a.nav__link.nav__link_current(href="#") Главная
+      li.nav__item
+        a.nav__link(href="#") Продукция
+        button.nav__dropdown-toggler.ml-2(type="button")
+          +icon('arrow-down')
+        .nav__dropdown
+          a.nav__link.nav__link_type_children(href="#") Модульные здания
+          a.nav__link.nav__link_type_children(href="#") Проекты из сендвич-панелей
+          a.nav__link.nav__link_type_children(href="#") Блок-контейнеры
+          a.nav__link.nav__link_type_children(href="#") Контрольно-пропускные пункты
+      li.nav__item
+        a.nav__link(href="#") Цены
+      li.nav__item
+        a.nav__link(href="#") Аренда
+      li.nav__item
+        a.nav__link(href="#") Бытовки б/у
+      li.nav__item
+        a.nav__link(href="#") Контакты

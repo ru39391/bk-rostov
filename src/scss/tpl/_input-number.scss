@@ -1,0 +1,42 @@
+.input-number {
+  @extend %d-flex-ai-center;
+}
+
+.input-number__counter {
+  @extend %d-flex-column;
+  @include fw(54px);
+  @include wh(54px,32px);
+  @include offset(0 8px 0 0,2px 8px);
+  @include border(1px,$color__border);
+  @include fs-lh(14px,$line-height__content);
+  border-radius: 4px;
+  justify-content: center;
+
+  &.input-number__counter_active {
+    color: $color__default;
+    background-color: #fff;
+  }
+}
+
+.input-number__toggler {
+  @extend %btn-default;
+  @extend %d-flex-column;
+  @extend %d-flex-centered;
+  @include fw(24px);
+  @include wh(24px);
+  @include font(28px,600);
+  @include border(1px,$color__border);
+  border-radius: 50%;
+
+  &.input-number__toggler_type_remove {
+    margin: 0 8px 0 0;
+  }
+
+  &:disabled {
+    color: $color__disabled !important;
+  }
+}
+
+.input-number__field {
+  display: none;
+}

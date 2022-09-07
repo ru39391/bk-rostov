@@ -1,0 +1,41 @@
+.btn {
+  @extend %btn-default;
+  @extend %d-flex-column;
+  @extend %d-flex-centered;
+  @include color(#fff);
+  height: 56px;
+  width: 100%;
+  max-width: 240px;
+  padding: 8px 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color: $color__info;
+
+  &.btn_lg {
+    height: 64px;
+    max-width: 288px;
+  }
+
+  &.btn_sm {
+    height: 48px;
+    max-width: 220px;
+  }
+
+  &.btn_unstyled {
+    @include wh(auto);
+    @include fw(auto);
+    background-color: rgba(0,0,0,0);
+  }
+
+  &.btn_unstyled {
+    @include wh(24px);
+    @include fw(24px);
+  }
+
+  &:disabled {
+    cursor: default;
+    text-shadow: 0 1px 5px rgba(0,0,0,.1);
+    background-color: $color__disabled !important;
+  }
+}

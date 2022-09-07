@@ -1,0 +1,38 @@
+.swiper-nav__item {
+  @extend %btn-default;
+  @include pos(50%,0);
+  @include wh(36px);
+  z-index: 2;
+  margin: -18px 0 0;
+  color: #252525;
+
+  &.swiper-nav__item_dir_next {
+    right: 0;
+    left: auto;
+  }
+
+  &:disabled {
+    opacity: .45;
+  }
+}
+
+.swiper-pagination {
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  @include wh(12px);
+  @include inline-block;
+  cursor: pointer;
+  margin: 0 16px 0 0;
+  border-radius: 50%;
+  background-color: #d5d7df;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.swiper-pagination-bullet-active {
+    background-color: $color__disabled;
+  }
+}

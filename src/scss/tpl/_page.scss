@@ -1,0 +1,6 @@
+.page {
+  @extend %d-flex-column;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}

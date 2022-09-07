@@ -1,0 +1,19 @@
+.partners {
+  @include media-breakpoint-down(md) {
+    display: grid;
+    text-align: center;
+    grid-column-gap: $grid-gutter-width;
+  }
+
+  @include media-breakpoint-only(md) {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  @include media-breakpoint-only(sm) {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  @include media-breakpoint-only(xs) {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
