@@ -4,7 +4,7 @@
 
 [bk-rostov.ru](https://bk-rostov.ru/) (главная доступна [здесь](https://html.39391.ru/bk/))
 
-Дизайн - Дарья, tg: **darya.smyslova.2013@mail.ru**
+Дизайн - Дарья, **darya.smyslova.2013@mail.ru**
 
 ## Техническая информация:
 
