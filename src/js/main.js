@@ -1,4 +1,5 @@
 import '../scss/main.scss';
+import { Fancybox } from '@fancyapps/fancybox';
 
 import './app/nav';
 import './app/promo';

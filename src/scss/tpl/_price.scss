@@ -16,6 +16,12 @@
     border-radius: 50%;
     background-color: #f4f4f4;
   }
+
+  &.price_bg_none {
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .price__title {
@@ -40,6 +46,13 @@
     left: 50%;
     bottom: 0;
     margin: 0 0 0 -30px;
+  }
+
+  &.price__title_type_plain {
+    @include h4;
+    padding-bottom: 0;
+    text-align: left;
+    text-transform: none;
   }
 
   &.price__title_color_info {

@@ -43,10 +43,11 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "bootstrap": "^4.6.0",
     "desandro-classie": "^1.0.1",
-    "jquery": "^3.6.0",
     "inputmask": "^5.0.7",
+    "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "swiper": "^8.1.4"
   }

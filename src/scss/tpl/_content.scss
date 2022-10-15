@@ -50,6 +50,27 @@
       margin-bottom: 14px;
     }
   }
+
+  li {
+    margin: 0 0 16px;
+    list-style-position: inside;
+  }
+
+  ul {
+    padding: 0 0 0 32px;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  ol {
+    padding: 0 0 0 32px;
+
+    li {
+      list-style-type: decimal;
+    }
+  }
 }
 
 .content__section {
