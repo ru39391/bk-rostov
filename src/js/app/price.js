@@ -6,7 +6,8 @@ priceSecArr.forEach(priceSecArrEl => {
   };
   priceParams.btn.addEventListener('click', e => {
     e.preventDefault();
-    const target = document.querySelector(e.currentTarget.getAttribute('data-target'));
-    target.querySelector('[name="priceform__type"]').value = priceParams.title.textContent;
+    const formName = document.querySelector(e.currentTarget.getAttribute('data-target'));
+    const fieldName = e.currentTarget.getAttribute('data-name');
+    formName.querySelector(`[name="${fieldName}"]`).value = priceParams.title.textContent;
   });
 });
