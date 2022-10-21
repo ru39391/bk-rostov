@@ -8,3 +8,4 @@ import './app/quiz';
 import './app/forms';
 import './app/anchors';
 import './app/price';
+import './app/pos';

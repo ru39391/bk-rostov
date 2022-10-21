@@ -48,40 +48,55 @@ block wrapper
       .row
         .col-xl-3.col-lg-4.col-sm-6.mb-4
           .price.price_bg_none
-            a.mb-3(href="#")
-              +img('content/bk.jpg','img-cover')
+            .pos-rel.mb-3
+              picture.price__picture.price__picture_type_main
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/byitovka-stroitelnaya.jpg" alt="")
+              picture.price__picture.price__picture_type_hover
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/hover/byitovka-stroitelnaya.jpg" alt="")
             a.price__title.price__title_type_plain.mb-4(href="#") Блок-контейнер для торговли
             .price__feature.price__feature_type_plain.pl-0.mb-5 Опционально — усиленное утепление, замена дверей/окон, отделки
             .price__footer
               button.btn.bg-brand.h-auto.py-3(type="button" data-toggle="modal" data-target="#price") Узнать цену
         .col-xl-3.col-lg-4.col-sm-6.mb-4
           .price.price_bg_none
-            a.mb-3(href="#")
-              +img('content/bk.jpg','img-cover')
+            .pos-rel.mb-3
+              picture.price__picture.price__picture_type_main
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/byitovka-stroitelnaya.jpg" alt="")
+              picture.price__picture.price__picture_type_hover
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/hover/byitovka-stroitelnaya.jpg" alt="")
             a.h4.font-weight-bold.mb-4(href="#") Блок-контейнер для торговли
             .price__feature.price__feature_type_plain.pl-0.mb-5 Опционально — усиленное утепление, замена дверей/окон, отделки
             .price__footer
               button.btn.bg-brand.h-auto.py-3(type="button") Узнать цену
         .col-xl-3.col-lg-4.col-sm-6.mb-4
           .price.price_bg_none
-            a.mb-3(href="#")
-              +img('content/bk.jpg','img-cover')
+            .pos-rel.mb-3
+              picture.price__picture.price__picture_type_main
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/byitovka-stroitelnaya.jpg" alt="")
+              picture.price__picture.price__picture_type_hover
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/hover/byitovka-stroitelnaya.jpg" alt="")
             a.h4.font-weight-bold.mb-4(href="#") Блок-контейнер для торговли
             .price__feature.price__feature_type_plain.pl-0.mb-5 Опционально — усиленное утепление, замена дверей/окон, отделки
             .price__footer
               button.btn.bg-brand.h-auto.py-3(type="button") Узнать цену
         .col-xl-3.col-lg-4.col-sm-6.mb-4
           .price.price_bg_none
-            a.mb-3(href="#")
-              +img('content/bk.jpg','img-cover')
+            .pos-rel.mb-3
+              picture.price__picture.price__picture_type_main
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/byitovka-stroitelnaya.jpg" alt="")
+              picture.price__picture.price__picture_type_hover
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/hover/byitovka-stroitelnaya.jpg" alt="")
             a.h4.font-weight-bold.mb-4(href="#") Блок-контейнер для торговли
             .price__feature.price__feature_type_plain.pl-0.mb-5 Опционально — усиленное утепление, замена дверей/окон, отделки
             .price__footer
               button.btn.bg-brand.h-auto.py-3(type="button") Узнать цену
         .col-xl-3.col-lg-4.col-sm-6.mb-4
           .price.price_bg_none
-            a.mb-3(href="#")
-              +img('content/bk.jpg','img-cover')
+            .pos-rel.mb-3
+              picture.price__picture.price__picture_type_main
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/byitovka-stroitelnaya.jpg" alt="")
+              picture.price__picture.price__picture_type_hover
+                img.img-cover(src="https://bk-rostov.ru/assets/images/pos/hover/byitovka-stroitelnaya.jpg" alt="")
             a.h4.font-weight-bold.mb-4(href="#") Блок-контейнер для торговли
             .price__feature.price__feature_type_plain.pl-0.mb-5 Опционально — усиленное утепление, замена дверей/окон, отделки
             .price__footer
@@ -636,28 +651,35 @@ block wrapper
           .section__title.section__title_border_bottom.color-brand Выполненные проекты
           .section__title.text-uppercase.color-white фото завершённых объектов
         a.btn.bg-brand(href="#") Все проекты
-      .row
-        .col-md-4.mb-4.mb-md-0
-          a.project(href="#")
-            +img('content/bk.jpg','img-cover')
-            span.project__wrapper
-              span.project__title Блок-контейнер для торговли
-              span.project__date
-                +icon('calendar','project__icon color-light mr-2')
-                | 20.06.2020 г.
-        .col-md-4.mb-4.mb-md-0
-          a.project(href="#")
-            +img('content/bk.jpg','img-cover')
-            span.project__wrapper
-              span.project__title Блок-контейнер для торговли
-              span.project__date
-                +icon('calendar','project__icon color-light mr-2')
-                | 20.06.2020 г.
-        .col-md-4
-          a.project(href="#")
-            +img('content/bk.jpg','img-cover')
-            span.project__wrapper
-              span.project__title Блок-контейнер для торговли
-              span.project__date
-                +icon('calendar','project__icon color-light mr-2')
-                | 20.06.2020 г.
+      .projects
+        .projects__slides.swiper
+          .swiper-wrapper
+            .swiper-slide.px-3
+              a.project(href="#")
+                +img('content/bk.jpg','img-cover')
+                span.project__wrapper
+                  span.project__title Блок-контейнер для торговли
+                  span.project__date
+                    +icon('calendar','project__icon color-light mr-2')
+                    | 20.06.2020 г.
+            .swiper-slide.px-3
+              a.project(href="#")
+                +img('content/bk.jpg','img-cover')
+                span.project__wrapper
+                  span.project__title Блок-контейнер для торговли
+                  span.project__date
+                    +icon('calendar','project__icon color-light mr-2')
+                    | 20.06.2020 г.
+            .swiper-slide.px-3
+              a.project(href="#")
+                +img('content/bk.jpg','img-cover')
+                span.project__wrapper
+                  span.project__title Блок-контейнер для торговли
+                  span.project__date
+                    +icon('calendar','project__icon color-light mr-2')
+                    | 20.06.2020 г.
+          .swiper-nav
+            button.swiper-nav__item.swiper-nav__item_dir_prev.color-white(type="button")
+              +icon('arrow-left')
+            button.swiper-nav__item.swiper-nav__item_dir_next.color-white(type="button")
+              +icon('arrow-right')

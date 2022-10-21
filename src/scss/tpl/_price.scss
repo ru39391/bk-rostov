@@ -8,6 +8,16 @@
   background-color: #fff;
   box-shadow: 0 0 40px 0 rgba(0,0,0,.2);
 
+  &:hover {
+    .price__picture_type_main {
+      opacity: 0;
+    }
+
+    .price__picture_type_hover {
+      opacity: 1;
+    }
+  }
+
   &:before {
     @include wh(250px);
     z-index: 1;
@@ -21,6 +31,17 @@
     &:before {
       display: none;
     }
+  }
+}
+
+.price__picture {
+  display: block;
+  transition: all .5s ease;
+
+  &.price__picture_type_hover {
+    @include pos(0,0);
+    @include wh(100%);
+    opacity: 0;
   }
 }
 
