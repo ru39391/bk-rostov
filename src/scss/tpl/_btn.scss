@@ -25,12 +25,21 @@
   &.btn_unstyled {
     @include wh(auto);
     @include fw(auto);
+    max-width: 100%;
+    font-weight: normal;
+    text-transform: none;
     background-color: rgba(0,0,0,0);
   }
 
-  &.btn_unstyled {
+  &.btn_close {
     @include wh(24px);
     @include fw(24px);
+  }
+
+  &.active {
+    .btn__caption {
+      border-color: rgba(0,0,0,0);
+    }
   }
 
   &:disabled {
@@ -38,4 +47,9 @@
     text-shadow: 0 1px 5px rgba(0,0,0,.1);
     background-color: $color__disabled !important;
   }
+}
+
+.btn__caption {
+  @include border(0 0 2px,$color__white,dashed);
+  padding: 0 0 4px;
 }

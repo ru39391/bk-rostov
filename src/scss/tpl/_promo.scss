@@ -9,7 +9,7 @@
 
 .promo__picture {
   @include before;
-  @include wh(50%,100%);
+  @include wh(40%,100%);
   position: absolute;
   top: 0;
   right: 0;
