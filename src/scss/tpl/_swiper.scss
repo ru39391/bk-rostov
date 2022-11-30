@@ -1,3 +1,9 @@
+.swiper-slide__img {
+  @include media-breakpoint-down(sm) {
+    height: 480px;
+  }
+}
+
 .swiper-nav__item {
   @extend %btn-default;
   @include pos(50%,0);

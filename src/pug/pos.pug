@@ -17,19 +17,35 @@ block wrapper
         h1.section__title Многолетний опыт работы в сфере производства модульных конструкций
       .promo.swiper.mb-4.mb-md-5
         .swiper-wrapper.text-center
-          .swiper-slide.h-auto
-            +img('content/gostiniczyi-iz-vagonchikov-001.jpg')
-          .swiper-slide.h-auto
-            +img('content/gostiniczyi-iz-vagonchikov-001.jpg')
-          .swiper-slide.h-auto
-            +img('content/gostiniczyi-iz-vagonchikov-001.jpg')
-          .swiper-slide.h-auto
-            +img('content/gostiniczyi-iz-vagonchikov-001.jpg')
+          .swiper-slide.d-flex.align-items-center.justify-content-center
+            a.swiper-slide__img(data-fancybox="gallery" href="img/content/gostiniczyi-iz-vagonchikov-001.jpg" data-caption="Многолетний опыт работы в сфере производства модульных конструкций")
+              +img('content/gostiniczyi-iz-vagonchikov-001.jpg','img-cover')
+          .swiper-slide.d-flex.align-items-center.justify-content-center
+            a.swiper-slide__img(data-fancybox="gallery" href="img/content/gostiniczyi-iz-vagonchikov-001.jpg")
+              +img('content/gostiniczyi-iz-vagonchikov-001.jpg','img-cover')
+          .swiper-slide.d-flex.align-items-center.justify-content-center
+            a.swiper-slide__img(data-fancybox="gallery" href="img/content/gostiniczyi-iz-vagonchikov-001.jpg")
+              +img('content/gostiniczyi-iz-vagonchikov-001.jpg','img-cover')
+          .swiper-slide.d-flex.align-items-center.justify-content-center
+            a.swiper-slide__img(data-fancybox="gallery" href="img/content/gostiniczyi-iz-vagonchikov-001.jpg")
+              +img('content/gostiniczyi-iz-vagonchikov-001.jpg','img-cover')
         .swiper-nav.d-none.d-md-block
           button.swiper-nav__item.swiper-nav__item_dir_prev.ml-3(type="button")
             +icon('arrow-left')
           button.swiper-nav__item.swiper-nav__item_dir_next.mr-3(type="button")
             +icon('arrow-right')
+      .d-flex.justify-content-center.mb-4
+        a.link-anchor.px-4.py-3.rounded.color-white.bg-brand(href="#price") Выбрать комплектацию
       .content
         p Мы являемся производителями. Многолетний опыт работы в сфере производства модульных конструкций позволяет нам выпускать высококачественную продукцию.
+        ul
+          li в скорости монтажа;
+          li мобильности;
+          li способности к трансформации;
+          li сроке эксплуатации.
         p Изготовление происходит под строгим контролем, каждый наш вагончик получает свой индивидуальный паспорт и номер. Это дает возможность отслеживать всю цепочку его изготовления, знать всех непосредственных исполнителей.
+        ol#price
+          li в скорости монтажа;
+          li мобильности;
+          li способности к трансформации;
+          li сроке эксплуатации.
